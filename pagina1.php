@@ -62,6 +62,7 @@
                 $_SESSION["respuesta3"] = $_REQUEST["pregunta_select"];
             }
             
+            /*
             if(isset($_SESSION["respuesta1"]) == "Si" && isset($_SESSION["respuesta2"]) == "Si" && isset($_SESSION["respuesta3"]) == "Si"){
                 echo"Las tres son Sí";
             }else if(isset($_SESSION["respuesta1"]) == "Si" && isset($_SESSION["respuesta2"]) == "No" && isset($_SESSION["respuesta3"]) == "Si"){
@@ -70,7 +71,9 @@
                 echo "Error";
             }
 
-            session_destroy();
+            */
+
+            print_r($_SESSION);
         
         ?>
 
