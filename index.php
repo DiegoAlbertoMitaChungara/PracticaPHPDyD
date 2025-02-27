@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insertar Nombre</title>
 </head>
 <body>
-    aisdugaiudgf
+
+    <form action="pagina1.php">
+        <p>Nombre: <input type="text" name="nombre" method="get"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
     
 </body>
 </html>
