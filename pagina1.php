@@ -63,7 +63,7 @@
 
         <!-- Pregunta 3: Checkbox -->
         <?php
-            echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]." (Elige hasta 3)</p>"
+            echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
         <input type="checkbox" name="pregunta3" value="Valiente"> Valiente
