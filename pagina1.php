@@ -157,6 +157,7 @@
 
         <?php 
 
+
             
             if(isset($_REQUEST["pregunta1"])) {
                 $_SESSION["respuesta1"] = $_REQUEST["pregunta1"];
