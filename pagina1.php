@@ -92,7 +92,7 @@
             <option value="No">No</option>
         </select>
 
-
+        
         <!-- Pregunta 5: Radio -->
         <?php
             echo "<p>Selecciona el objeto mágico con el que soñarías tener para emprender tus aventuras, ".$_SESSION["nombrePersonaje"]."</p>"
