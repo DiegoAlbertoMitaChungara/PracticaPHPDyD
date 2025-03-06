@@ -188,16 +188,6 @@
             }
             
             
-            /*
-            if(isset($_SESSION["respuesta1"]) == "Si" && isset($_SESSION["respuesta2"]) == "Si" && isset($_SESSION["respuesta3"]) == "Si"){
-                echo"Las tres son Sí";
-            }else if(isset($_SESSION["respuesta1"]) == "Si" && isset($_SESSION["respuesta2"]) == "No" && isset($_SESSION["respuesta3"]) == "Si"){
-                echo"Primera -> Sí Segunda -> No Tercera -> Sí";
-            }else{
-                echo "Error";
-            }
-
-            */
 
             //Verifica antes si todas las respuestas son la primera
             if($_SESSION["pregunta1"] == "Si" && $_SESSION["pregunta2"] == "2.1" && $_SESSION["pregunta3"] == "3.1" && $_SESSION["pregunta4"] == "Si" 
@@ -207,7 +197,34 @@
 
 
             }else{
+                $raza[0] = 0;//Draconido
+                $raza[1] = 0;//Elfo
+                $raza[2] = 0;//Enano
+                $raza[3] = 0;//Gnomo
+                $raza[4] = 0;//Humano
+                $raza[5] = 0;//Mediano
+                $raza[6] = 0;//Semielfo
+                $raza[7] = 0;//Semiorco
+                $raza[8] = 0;//Tiflin
 
+                if($_SESSION["pregunta1"]=="Si"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["pregunta1"]=="No"){
+                    $raza[2]++;
+                    $raza[3]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                    $raza[7]++;
+                }
+                if($_SESSION["pregunta2"]=="2.1"){
+                    $raza[2]++;
+                    $raza[3]++;
+                }
+                if
 
             }
 
