@@ -51,34 +51,34 @@
         <?php
             echo "<p>Si pudieras elegir el lugar ideal para vivir, ¿cuál te resultaría más inspirador, ".$_SESSION["nombrePersonaje"]."?</p>"; 
         ?>
-        <input type="radio" name="pregunta2" value="Las majestuosas montañas y profundos túneles" required> Las majestuosas montañas y profundos túneles
+        <input type="radio" name="pregunta2" value="2.1" required> Las majestuosas montañas y profundos túneles
         <br>
-        <input type="radio" name="pregunta2" value="Los bosques encantados, bañados por la luz de la luna" required> Los bosques encantados, bañados por la luz de la luna
+        <input type="radio" name="pregunta2" value="2.2" required> Los bosques encantados, bañados por la luz de la luna
         <br>
-        <input type="radio" name="pregunta2" value="Las bulliciosas calles y diversidad de una gran metrópolis" required> Las bulliciosas calles y diversidad de una gran metrópolis
+        <input type="radio" name="pregunta2" value="2.3" required> Las bulliciosas calles y diversidad de una gran metrópolis
         <br>
-        <input type="radio" name="pregunta2" value="Un vibrante mercado lleno de festivales y color" required> Un vibrante mercado lleno de festivales y color
+        <input type="radio" name="pregunta2" value="2.4" required> Un vibrante mercado lleno de festivales y color
         <br>
-        <input type="radio" name="pregunta2" value="Un rincón místico, donde la magia y lo oculto se funden" required> Un rincón místico, donde la magia y lo oculto se funden
+        <input type="radio" name="pregunta2" value="2.5" required> Un rincón místico, donde la magia y lo oculto se funden
 
         <!-- Pregunta 3: Checkbox -->
         <?php
             echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <input type="checkbox" name="pregunta3" value="Valiente"> Valiente
+        <input type="checkbox" name="pregunta3" value="3.1"> Valiente
         <br>
-        <input type="checkbox" name="pregunta3" value="Astuto"> Astuto
+        <input type="checkbox" name="pregunta3" value="3.2"> Astuto
         <br>
-        <input type="checkbox" name="pregunta3" value="Sabio"> Sabio
+        <input type="checkbox" name="pregunta3" value="3.3"> Sabio
         <br>
-        <input type="checkbox" name="pregunta3" value="Carismático"> Carismático
+        <input type="checkbox" name="pregunta3" value="3.4"> Carismático
         <br>
-        <input type="checkbox" name="pregunta3" value="Resistente"> Resistente
+        <input type="checkbox" name="pregunta3" value="3.5"> Resistente
         <br>
-        <input type="checkbox" name="pregunta3" value="Místico"> Místico
+        <input type="checkbox" name="pregunta3" value="3.6"> Místico
         <br>
-        <input type="checkbox" name="pregunta3" value="Alegre"> Alegre
+        <input type="checkbox" name="pregunta3" value="3.7"> Alegre
 
 
         <!-- Pregunta 4: Select -->
@@ -98,24 +98,24 @@
             echo "<p>Selecciona el objeto mágico con el que soñarías tener para emprender tus aventuras, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <input type="radio" name="pregunta5" value="Una espada ancestral grabada en runas" required> Una espada ancestral grabada en runas
+        <input type="radio" name="pregunta5" value="5.1" required> Una espada ancestral grabada en runas
         <br>
-        <input type="radio" name="pregunta5" value="Un amuleto radiante que ilumina la oscuridad" required> Un amuleto radiante que ilumina la oscuridad
+        <input type="radio" name="pregunta5" value="5.2" required> Un amuleto radiante que ilumina la oscuridad
         <br>
-        <input type="radio" name="pregunta5" value="Un bastón cuyos fuegos internos parecen vivos" required> Un bastón cuyos fuegos internos parecen vivos
+        <input type="radio" name="pregunta5" value="5.3" required> Un bastón cuyos fuegos internos parecen vivos
         <br>
-        <input type="radio" name="pregunta5" value="Un curioso artefacto mecánico de intrincados engranajes" required> Un curioso artefacto mecánico de intrincados engranajes
+        <input type="radio" name="pregunta5" value="5.4" required> Un curioso artefacto mecánico de intrincados engranajes
         <br>
-        <input type="radio" name="pregunta5" value="Una capa que te permite fundirte con las sombras" required> Una capa que te permite fundirte con las sombras
+        <input type="radio" name="pregunta5" value="5.5" required> Una capa que te permite fundirte con las sombras
 
 
         <!-- Pregunta 6: Radio -->
         <?php
             echo "<p>¿Qué valor te define más: la tradición y la herencia ancestral o la creatividad y el cambio constante, ".$_SESSION["nombrePersonaje"]."?</p>"
         ?>
-        <input type="radio" name="pregunta6" value="La tradición (ideal para razas con fuerte legado)" required> La tradición (ideal para razas con fuerte legado)
+        <input type="radio" name="pregunta6" value="6.1" required> La tradición (ideal para razas con fuerte legado)
         <br>
-        <input type="radio" name="pregunta6" value="La innovación (ideal para razas versátiles)" required> La innovación (ideal para razas versátiles)
+        <input type="radio" name="pregunta6" value="6.2" required> La innovación (ideal para razas versátiles)
 
             
         <!-- Pregunta 7: Select -->
@@ -132,15 +132,15 @@
         <?php
             echo "<p>¿Qué elementos resuenan más contigo en el día a día, ".$_SESSION["nombrePersonaje"]."?</p>"
         ?>
-        <input type="checkbox" name="pregunta8" value="El ardor y la pasión del fuego"> El ardor y la pasión del fuego
+        <input type="checkbox" name="pregunta8" value="8.1"> El ardor y la pasión del fuego
         <br>
-        <input type="checkbox" name="pregunta8" value="La solidez y seguridad de la tierra"> La solidez y seguridad de la tierra
+        <input type="checkbox" name="pregunta8" value="8.2"> La solidez y seguridad de la tierra
         <br>
-        <input type="checkbox" name="pregunta8" value="La libertad y la amplitud del cielo"> La libertad y la amplitud del cielo
+        <input type="checkbox" name="pregunta8" value="8.3"> La libertad y la amplitud del cielo
         <br>
-        <input type="checkbox" name="pregunta8" value="La calma y la profundidad del agua"> La calma y la profundidad del agua
+        <input type="checkbox" name="pregunta8" value="8.4"> La calma y la profundidad del agua
         <br>
-        <input type="checkbox" name="pregunta8" value="Una energía mística que parece envolverlo todo"> Una energía mística que parece envolverlo todo
+        <input type="checkbox" name="pregunta8" value="8.5"> Una energía mística que parece envolverlo todo
 
         <!-- Pregunta 9: Select -->
         <?php
@@ -198,6 +198,18 @@
             }
 
             */
+
+            //Verifica antes si todas las respuestas son la primera
+            if($_SESSION["pregunta1"] == "Si" && $_SESSION["pregunta2"] == "2.1" && $_SESSION["pregunta3"] == "3.1" && $_SESSION["pregunta4"] == "Si" 
+                && $_SESSION["pregunta5"] == "5.1" && $_SESSION["pregunta6"] == "6.1" && $_SESSION["pregunta7"] == "Si" && $_SESSION["pregunta8"] == "8.1" && $_SESSION["pregunta9"] == "Si"){
+                
+                
+
+
+            }else{
+
+
+            }
 
             print_r($_SESSION);
         
