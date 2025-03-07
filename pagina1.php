@@ -26,8 +26,24 @@
     <h1>Razas de Dungeons & Dragons</h1>
     <p>
         En Dungeons & Dragons existen diversas razas con características únicas. Algunas de las principales son:
-        <strong>Humanos</strong>, <strong>Elfos</strong>, <strong>Enanos</strong>, <strong>Medianos</strong>, <strong>Gnomos</strong>,
-        <strong>Tieflings</strong>, <strong>Dragonborn</strong> y <strong>Semielfos</strong>.
+        <br><br>
+        <strong>Dracónidos:</strong> Descendientes de dragones, se distinguen por su apariencia imponente, afinidad por el fuego y un linaje legendario.
+        <br>
+        <strong>Elfos:</strong> Seres longevos y elegantes, conectados con la magia y la naturaleza, que suelen habitar bosques encantados.
+        <br>
+        <strong>Enanos:</strong> Robustos y de gran resistencia, expertos en la forja y la minería, con un fuerte sentido de la tradición y el honor.
+        <br>
+        <strong>Gnomos:</strong> Curiosos e ingeniosos, conocidos por su inventiva y una sutil conexión con la magia, ideales para roles místicos.
+        <br>
+        <strong>Humanos:</strong> Versátiles y adaptables, capaces de destacarse en múltiples disciplinas y entornos, reflejando diversidad y equilibrio.
+        <br>
+        <strong>Medianos:</strong> De estatura pequeña pero llenos de energía, astucia y carisma, a menudo se destacan por su espíritu aventurero.
+        <br>
+        <strong>Semielfos:</strong> La perfecta fusión entre la gracia élfica y la adaptabilidad humana, ofreciendo un equilibrio entre tradición y versatilidad.
+        <br>
+        <strong>Semiorcos:</strong> Guerreros intensos y rudos, que combinan fuerza bruta con un espíritu desafiante y, a veces, una lucha interna con sus orígenes.
+        <br>
+        <strong>Tiflin:</strong> Con ascendencia infernal o dracónica, poseen un carisma enigmático y una conexión con lo místico y el fuego.
     </p>
 
     <h2>Formulario de Creación de Personaje</h2>
@@ -224,7 +240,10 @@
                     $raza[2]++;
                     $raza[3]++;
                 }
-                if
+                if($_SESSION["pregunta2"]=="2.2"){
+                    $raza[2]++;
+                    $raza[3]++;
+                }
 
             }
 
