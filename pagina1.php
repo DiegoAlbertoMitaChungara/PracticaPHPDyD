@@ -73,7 +73,7 @@
         <br>
         <input type="radio" name="pregunta2" value="2.3" required> Las bulliciosas calles y diversidad de una gran metrópolis
         <br>
-        <input type="radio" name="pregunta2" value="2.4" required> Un vibrante mercado lleno de festivales y color
+        <input type="radio" name="pregunta2" value="2.4" required> Un vibrante mercado especializado en compra-venta de todo tipo de utensilios
         <br>
         <input type="radio" name="pregunta2" value="2.5" required> Un rincón místico, donde la magia y lo oculto se funden
 
@@ -82,19 +82,19 @@
             echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <input type="checkbox" name="pregunta3" value="3.1"> Valiente
+        <input type="checkbox" name="pregunta3.1" value="Si"> Valiente
         <br>
-        <input type="checkbox" name="pregunta3" value="3.2"> Astuto
+        <input type="checkbox" name="pregunta3.2" value="Si"> Astuto
         <br>
-        <input type="checkbox" name="pregunta3" value="3.3"> Sabio
+        <input type="checkbox" name="pregunta3.3" value="Si"> Sabio
         <br>
-        <input type="checkbox" name="pregunta3" value="3.4"> Carismático
+        <input type="checkbox" name="pregunta3.4" value="Si"> Carismático
         <br>
-        <input type="checkbox" name="pregunta3" value="3.5"> Resistente
+        <input type="checkbox" name="pregunta3.5" value="Si"> Resistente
         <br>
-        <input type="checkbox" name="pregunta3" value="3.6"> Místico
+        <input type="checkbox" name="pregunta3.6" value="Si"> Místico
         <br>
-        <input type="checkbox" name="pregunta3" value="3.7"> Alegre
+        <input type="checkbox" name="pregunta3.7" value="Si"> Alegre
 
 
         <!-- Pregunta 4: Select -->
@@ -148,15 +148,15 @@
         <?php
             echo "<p>¿Qué elementos resuenan más contigo en el día a día, ".$_SESSION["nombrePersonaje"]."?</p>"
         ?>
-        <input type="checkbox" name="pregunta8" value="8.1"> El ardor y la pasión del fuego
+        <input type="checkbox" name="pregunta8.1" value="Si"> El ardor y la pasión del fuego
         <br>
-        <input type="checkbox" name="pregunta8" value="8.2"> La solidez y seguridad de la tierra
+        <input type="checkbox" name="pregunta8.2" value="Si"> La solidez y seguridad de la tierra
         <br>
-        <input type="checkbox" name="pregunta8" value="8.3"> La libertad y la amplitud del cielo
+        <input type="checkbox" name="pregunta8.3" value="Si"> La libertad y la amplitud del cielo
         <br>
-        <input type="checkbox" name="pregunta8" value="8.4"> La calma y la profundidad del agua
+        <input type="checkbox" name="pregunta8.4" value="Si"> La calma y la profundidad del agua
         <br>
-        <input type="checkbox" name="pregunta8" value="8.5"> Una energía mística que parece envolverlo todo
+        <input type="checkbox" name="pregunta8.5" value="Si"> Una energía mística que parece envolverlo todo
 
         <!-- Pregunta 9: Select -->
         <?php
@@ -173,7 +173,7 @@
 
         <?php 
 
-
+            //Importante añadir cada pregunta de los checkbox(Ya hecho)
             
             if(isset($_REQUEST["pregunta1"])) {
                 $_SESSION["respuesta1"] = $_REQUEST["pregunta1"];
@@ -181,8 +181,26 @@
             if(isset($_REQUEST["pregunta2"])){
                 $_SESSION["respuesta2"] = $_REQUEST["pregunta2"];
             }
-            if(isset($_REQUEST["pregunta3"])){
-                $_SESSION["respuesta3"] = $_REQUEST["pregunta3"];
+            if(isset($_REQUEST["pregunta3.1"])){
+                $_SESSION["respuesta3.1"] = $_REQUEST["pregunta3.1"];
+            }
+            if(isset($_REQUEST["pregunta3.2"])){
+                $_SESSION["respuesta3.2"] = $_REQUEST["pregunta3.2"];
+            }
+            if(isset($_REQUEST["pregunta3.3"])){
+                $_SESSION["respuesta3.3"] = $_REQUEST["pregunta3.3"];
+            }
+            if(isset($_REQUEST["pregunta3.4"])){
+                $_SESSION["respuesta3.4"] = $_REQUEST["pregunta3.4"];
+            }
+            if(isset($_REQUEST["pregunta3.5"])){
+                $_SESSION["respuesta3.5"] = $_REQUEST["pregunta3.5"];
+            }
+            if(isset($_REQUEST["pregunta3.6"])){
+                $_SESSION["respuesta3.6"] = $_REQUEST["pregunta3.6"];
+            }
+            if(isset($_REQUEST["pregunta3.7"])){
+                $_SESSION["respuesta3.7"] = $_REQUEST["pregunta3.7"];
             }
             if(isset($_REQUEST["pregunta4"])){
                 $_SESSION["respuesta4"] = $_REQUEST["pregunta4"];
@@ -196,18 +214,30 @@
             if(isset($_REQUEST["pregunta7"])){
                 $_SESSION["respuesta7"] = $_REQUEST["pregunta7"];
             }
-            if(isset($_REQUEST["pregunta8"])){
-                $_SESSION["respuesta8"] = $_REQUEST["pregunta8"];
+            if(isset($_REQUEST["pregunta8.1"])){
+                $_SESSION["respuesta8.1"] = $_REQUEST["pregunta8.1"];
+            }
+            if(isset($_REQUEST["pregunta8.2"])){
+                $_SESSION["respuesta8.2"] = $_REQUEST["pregunta8.2"];
+            }
+            if(isset($_REQUEST["pregunta8.3"])){
+                $_SESSION["respuesta8.3"] = $_REQUEST["pregunta8.3"];
+            }
+            if(isset($_REQUEST["pregunta8.4"])){
+                $_SESSION["respuesta8.4"] = $_REQUEST["pregunta8.4"];
+            }
+            if(isset($_REQUEST["pregunta8.5"])){
+                $_SESSION["respuesta8.5"] = $_REQUEST["pregunta8.5"];
             }
             if(isset($_REQUEST["pregunta9"])){
                 $_SESSION["respuesta9"] = $_REQUEST["pregunta9"];
             }
             
-            
+            //Cambiar lo que es pregunta por respuesta(recordar si más adelante añadimos algún otro easter egg o algo, después del $_SESSION va dentro [respuesta])
 
             //Verifica antes si todas las respuestas son la primera
-            if($_SESSION["pregunta1"] == "Si" && $_SESSION["pregunta2"] == "2.1" && $_SESSION["pregunta3"] == "3.1" && $_SESSION["pregunta4"] == "Si" 
-                && $_SESSION["pregunta5"] == "5.1" && $_SESSION["pregunta6"] == "6.1" && $_SESSION["pregunta7"] == "Si" && $_SESSION["pregunta8"] == "8.1" && $_SESSION["pregunta9"] == "Si"){
+            if($_SESSION["respuesta1"] == "Si" && $_SESSION["respuesta2"] == "2.1" && $_SESSION["respuesta3"] == "Si" && $_SESSION["respuesta4"] == "Si" 
+                && $_SESSION["respuesta5"] == "5.1" && $_SESSION["respuesta6"] == "6.1" && $_SESSION["respuesta7"] == "Si" && $_SESSION["respuesta8"] == "Si" && $_SESSION["pregunta9"] == "Si"){
                 
                 
 
@@ -223,12 +253,14 @@
                 $raza[7] = 0;//Semiorco
                 $raza[8] = 0;//Tiflin
 
-                if($_SESSION["pregunta1"]=="Si"){
+                //Cambiar lo que es pregunta por respuesta
+
+                if($_SESSION["respuesta1"]=="Si"){
                     $raza[0]++;
                     $raza[1]++;
                     $raza[8]++;
                 }
-                if($_SESSION["pregunta1"]=="No"){
+                if($_SESSION["respuesta1"]=="No"){
                     $raza[2]++;
                     $raza[3]++;
                     $raza[4]++;
@@ -236,14 +268,40 @@
                     $raza[6]++;
                     $raza[7]++;
                 }
-                if($_SESSION["pregunta2"]=="2.1"){
+                if($_SESSION["respuesta2"]=="2.1"){
                     $raza[2]++;
                     $raza[3]++;
                 }
-                if($_SESSION["pregunta2"]=="2.2"){
-                    $raza[2]++;
+                if($_SESSION["respuesta2"]=="2.2"){
+                    $raza[1]++;
                     $raza[3]++;
+                    $raza[6]++;
                 }
+                if($_SESSION["respuesta2"]=="2.3"){
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta2"]=="2.4"){
+                    $raza[2]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta2"]=="2.5"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[3]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }if($_SESSION["respuesta3"]=="Si"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[3]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                    
 
             }
 
