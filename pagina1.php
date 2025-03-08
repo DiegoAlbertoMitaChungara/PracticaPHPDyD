@@ -116,9 +116,9 @@
 
         <input type="radio" name="pregunta5" value="5.1" required> Una espada ancestral grabada en runas
         <br>
-        <input type="radio" name="pregunta5" value="5.2" required> Un amuleto radiante que ilumina la oscuridad
+        <input type="radio" name="pregunta5" value="5.2" required> Un amuleto radiante que protege del mal
         <br>
-        <input type="radio" name="pregunta5" value="5.3" required> Un bastón cuyos fuegos internos parecen vivos
+        <input type="radio" name="pregunta5" value="5.3" required> Un bastón obtenido de árboles sagrados
         <br>
         <input type="radio" name="pregunta5" value="5.4" required> Un curioso artefacto mecánico de intrincados engranajes
         <br>
@@ -294,11 +294,147 @@
                     $raza[3]++;
                     $raza[7]++;
                     $raza[8]++;
-                }if($_SESSION["respuesta3"]=="Si"){
+                }
+                if($_SESSION["respuesta3.1"]=="Si"){
+                    $raza[0]++;
+                    $raza[2]++;
+                    $raza[4]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta3.2"]=="Si"){
+                    $raza[2]++;
+                    $raza[3]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta3.3"]=="Si"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[2]++;
+                    $raza[4]++;
+                }
+                if($_SESSION["respuesta3.4"]=="Si"){
+                    $raza[0]++;
+                    $raza[3]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta3.5"]=="Si"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[2]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta3.6"]=="Si"){
                     $raza[0]++;
                     $raza[1]++;
                     $raza[3]++;
+                    $raza[6]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta3.7"]=="Si"){
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta4"]=="Si"){
+                    $raza[0]++;
+                    $raza[3]++;
                     $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta4"]=="No"){
+                    $raza[1]++;
+                    $raza[2]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta5"]=="5.1"){
+                    $raza[0]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta5"]=="5.2"){
+                    $raza[4]++;
+                    $raza[5]++;
+                }
+                if($_SESSION["respuesta5"]=="5.3"){
+                    $raza[1]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta5"]=="5.4"){
+                    $raza[2]++;
+                    $raza[3]++;
+                }
+                if($_SESSION["respuesta5"]=="5.5"){
+                    $raza[4]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta6"]=="6.1"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[2]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta6"]=="6.2"){
+                    $raza[3]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta7"]=="Si"){
+                    $raza[0]++;
+                    $raza[1]++;
+                    $raza[3]++;
+                    $raza[6]++;
+                    $raza[7]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta7"]=="No"){
+                    $raza[2]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                }
+                if($_SESSION["respuesta8.1"]=="Si"){
+                    $raza[0]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta8.2"]=="Si"){
+                    $raza[2]++;
+                    $raza[7]++;
+                }
+                if($_SESSION["respuesta8.3"]=="Si"){
+                    $raza[0]++;
+                    $raza[4]++;
+                    $raza[5]++;
+                }
+                if($_SESSION["respuesta8.4"]=="Si"){
+                    $raza[1]++;
+                    $raza[6]++;
+                }
+                if($_SESSION["respuesta8.5"]=="Si"){
+                    $raza[1]++;
+                    $raza[3]++;
+                    $raza[6]++;
+                    $raza[8]++;
+                }
+                if($_SESSION["respuesta9"]=="Si"){
+                    $raza[0]++;
+                    $raza[4]++;
+                    $raza[6]++;
+                    $raza[7]++;
+                }
+                if($_SESSION["respuesta9"]=="No"){
+                    $raza[1]++;
+                    $raza[2]++;
+                    $raza[3]++;
+                    $raza[5]++;
                     $raza[8]++;
                 }
                     
