@@ -8,7 +8,7 @@
 <body>
     <h1>Características de Dungeons & Dragons</h1>
         <p>
-            En Dungeons & Dragons existen diversas características. Algunas de las principales son:<br><br>
+            En Dungeons & Dragons existen diversas características únicas. Algunas de las principales son:<br><br>
             <strong>Inteligencia:</strong> La Inteligencia evalúa la capacidad de razonamiento, aprendizaje y conocimiento. Esta característica es crucial para personajes que dependen del estudio, la resolución de acertijos y la memorización de información, como los magos. Un personaje con alta Inteligencia suele tener un amplio bagaje cultural y puede aprender idiomas, investigar y encontrar soluciones creativas a los problemas.
             <br>
             <strong>Fuerza:</strong> La Fuerza mide el poder físico y la capacidad de un personaje para realizar tareas que requieren esfuerzo bruto. Es esencial para actividades como levantar o empujar objetos pesados, romper barreras, y en combate, determina el daño que se inflige con armas cuerpo a cuerpo. Un personaje con alta Fuerza destacará en maniobras atléticas y en situaciones donde se requiera una gran potencia física.

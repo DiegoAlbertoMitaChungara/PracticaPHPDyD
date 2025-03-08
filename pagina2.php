@@ -13,7 +13,7 @@
 <body>
     <h1>Clases de Dungeons & Dragons</h1>
     <p>
-        En Dungeons & Dragons existen diversas clases. Algunas de las principales son:<br><br>
+        En Dungeons & Dragons existen diversas clases únicas. Algunas de las principales son:<br><br>
         <strong>Bárbaro:</strong> Guerrero feroz que canaliza su furia y fuerza bruta en el combate, destacando en la agresividad y el poder físico.
         <br>
         <strong>Bardo:</strong> Artista encantador que usa la música, la poesía y habilidades mágicas para inspirar y manipular a aliados y adversarios.
