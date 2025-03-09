@@ -40,10 +40,22 @@
     </p>
 
     <form action="" method="POST">
+
         <!-- Pregunta 1 -->
-        <p>Elige un color con el que te sientas identificado</p>
-        <input type="color" name="pregunta1">
+        <p>¿A cuántos enemigos preferirías enfrentar en combate, <?php $_SESSION["nombrePersonaje"] ?>?</p>
+        <input type="number" name="pregunta1" min="1" max="30" value="1">
+
+        <!-- Pregunta 2 -->
+        <p>Elige el color con el que te sientas más identificado, <?php $_SESSION["nombrePersonaje"] ?>?</p>
+        <input type="color" name="pregunta2">
         
+        <!-- Pregunta 3 -->
+        <p>¿Cuántas aliados prefieres tener a tu lado en una batalla decisiva, <?php $_SESSION["nombrePersonaje"] ?>? (0-25)</p>
+        <input type="range" name="pregunta3" min="0" max="25" style="width: 500px;">
+
+        <!-- Pregunta 4 -->
+        <p>¿En qué fecha iniciarías tu aventura épica, <?php $_SESSION["nombrePersonaje"] ?>? (solo se evalúa el mes y el día)</p>
+        <input type="date" name="pregunta4" min="2025-01-01" max="2025-12-31">
 
 
     </form>
