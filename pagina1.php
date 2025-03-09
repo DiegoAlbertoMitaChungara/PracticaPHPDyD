@@ -46,6 +46,7 @@
         <strong>Tiflin:</strong> Con ascendencia infernal o dracónica, poseen un carisma enigmático y una conexión con lo místico y el fuego.
     </p>
 
+    
     <h2>Formulario de Creación de Personaje</h2>
     <form method="POST" action="pagina1.php">
         <!-- Pregunta 1: Select -->
@@ -171,7 +172,61 @@
         <br><br>
         <input type="submit" value="Crear Personaje">
 
-        <?php 
+        <?php
+
+            $errors = [];
+            
+            // Validar Pregunta 1
+            if (empty($_POST["respuesta1"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 1.";
+            }
+            // Validar Pregunta 2
+            if (empty($_POST["respuesta2"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 2.";
+            }
+            // Validar Pregunta 3
+            if (
+                empty($_POST["respuesta3.1"]) &&
+                empty($_POST["respuesta3.2"]) &&
+                empty($_POST["respuesta3.3"]) &&
+                empty($_POST["respuesta3.4"]) &&
+                empty($_POST["respuesta3.5"]) &&
+                empty($_POST["respuesta3.6"]) &&
+                empty($_POST["respuesta3.7"])
+            ) {
+                $errors[] = "Debes seleccionar al menos una opción en la Pregunta 3.";
+            }
+            // Validar Pregunta 4
+            if (empty($_POST["respuesta4"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 4.";
+            }
+            // Validar Pregunta 5
+            if (empty($_POST["respuesta5"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 5.";
+            }
+            // Validar Pregunta 6
+            if (empty($_POST["respuesta6"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 6.";
+            }
+            // Validar Pregunta 7
+            if (empty($_POST["respuesta7"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 7.";
+            }
+            // Validar Pregunta 8
+            if (
+                empty($_POST["respuesta8.1"]) &&
+                empty($_POST["respuesta8.2"]) &&
+                empty($_POST["respuesta8.3"]) &&
+                empty($_POST["respuesta8.4"]) &&
+                empty($_POST["respuesta8.5"])
+            ) {
+                $errors[] = "Debes seleccionar al menos una opción en la Pregunta 8.";
+            }
+            // Validar Pregunta 9
+            if (empty($_POST["respuesta9"])) {
+                $errors[] = "Debes seleccionar una opción para la Pregunta 9.";
+            }
+
 
             //Importante añadir cada pregunta de los checkbox(Ya hecho)
             
