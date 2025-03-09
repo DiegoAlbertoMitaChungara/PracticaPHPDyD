@@ -39,7 +39,7 @@
         <strong>Pícaro:</strong> Especialista en el sigilo, la astucia y los trucos, ideal para emboscadas y para aprovechar la precisión en el combate.
     </p>
 
-    <form action="" method="POST">
+    <form action="pagina2.php" method="POST">
 
         <!-- Pregunta 1 -->
         <p>¿A cuántos enemigos preferirías enfrentar en combate, <?php $_SESSION["nombrePersonaje"] ?>?</p>
@@ -107,31 +107,31 @@
             $clases[11]++;
         }
         else if($_SESSION["respuesta1Clase"] == 2){
-            $_SESSION[9]++;
+            $clases[9]++;
         }
         else if($_SESSION["respuesta1Clase"] == 3){
-            $_SESSION[5]++;
+            $clases[5]++;
         }
         else if($_SESSION["respuesta1Clase"] == 4 || $_SESSION["respuesta1Clase"] == 5){
-            $_SESSION[6]++;
+            $clases[6]++;
         }
         else if($_SESSION["respuesta1Clase"] == 6 || $_SESSION["respuesta1Clase"] == 7){
-            $_SESSION[10]++;
+            $clases[10]++;
         }
         else if($_SESSION["respuesta1Clase"] == 8 || $_SESSION["respuesta1Clase"] == 9){
-            $_SESSION[0]++;
+            $clases[0]++;
         }
         else if($_SESSION["respuesta1Clase"] >= 10 && $_SESSION["respuesta1Clase"] <= 12){
-            $_SESSION[3]++;
+            $clases[3]++;
         }
         else if($_SESSION["respuesta1Clase"] >= 13 && $_SESSION["respuesta1Clase"] <= 15){
-            $_SESSION[4]++;
+            $clases[4]++;
         }
         else if($_SESSION["respuesta1Clase"] >= 16 && $_SESSION["respuesta1Clase"] <= 18){
-            $_SESSION[1]++;
+            $clases[1]++;
         }
         else if($_SESSION["respuesta1Clase"] == 19 || $_SESSION["respuesta1Clase"] == 20){
-            $_SESSION[2]++;
+            $clases[2]++;
         }else{
             $clases[7]++;
             $clases[8]++;
@@ -195,34 +195,34 @@
             $clases[11]++;
         }
         else if($_SESSION["respuesta3Clase"] == 1){
-            $_SESSION[9]++;
+            $clases[9]++;
         }
         else if($_SESSION["respuesta3Clase"] == 2){
-            $_SESSION[5]++;
+            $clases[5]++;
         }
         else if($_SESSION["respuesta3Clase"] == 3 || $_SESSION["respuesta3Clase"] == 4){
-            $_SESSION[6]++;
+            $clases[6]++;
         }
         else if($_SESSION["respuesta3Clase"] == 5 || $_SESSION["respuesta3Clase"] == 6){
-            $_SESSION[10]++;
+            $clases[10]++;
         }
         else if($_SESSION["respuesta3Clase"] == 7 || $_SESSION["respuesta3Clase"] == 8){
-            $_SESSION[0]++;
+            $clases[0]++;
         }
         else if($_SESSION["respuesta3Clase"] == 9 || $_SESSION["respuesta3Clase"] == 10){
-            $_SESSION[3]++;
+            $clases[3]++;
         }
         else if($_SESSION["respuesta3Clase"] == 11 || $_SESSION["respuesta3Clase"] == 12){
-            $_SESSION[4]++;
+            $clases[4]++;
         }
         else if($_SESSION["respuesta3Clase"] >= 13 && $_SESSION["respuesta3Clase"] <= 15){
-            $_SESSION[1]++;
+            $clases[1]++;
         }
         else if($_SESSION["respuesta3Clase"] >= 16 && $_SESSION["respuesta3Clase"] <= 18){
-            $_SESSION[2]++;
+            $clases[2]++;
         }
         else if($_SESSION["respuesta3Clase"] == 19 || $_SESSION["respuesta3Clase"] == 20){
-            $_SESSION[7]++;
+            $clases[7]++;
         }else{
             $clases[8]++;
         }
@@ -290,7 +290,9 @@
         }
 
         
+        print_r($clases);
 
+        print indiceElementoMayor($clases);
 
 
 

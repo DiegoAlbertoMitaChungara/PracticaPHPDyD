@@ -1,4 +1,9 @@
 <?php
+/**
+ * Método que recibe un color y te devuelve el color que predomina en él
+ * @param mixed $hexColor Color en hexadecimal
+ * @return string Color predominante (cadena de texto)
+ */
 function cogeColorDominante($hexColor)
 {
     // Extraer los valores de Rojo, Verde y Azul
@@ -24,6 +29,21 @@ function cogeColorDominante($hexColor)
     }
 }
 
-
+/**
+ * Método que recibe un array de números y te devuelve el índice del elemento que mayor valor contenga
+ * @param mixed $array Array de números
+ * @return int Índice del elemento cuyo valor sea el mayor
+ */
+function indiceElementoMayor($array){
+    $numMayor = 0;
+    $guardaIndice = 0;
+    for($i = 0; $i < count($array); $i++){
+        if($array[$i] > $numMayor){
+            $numMayor = $array[$i];
+            $guardaIndice = $i;
+        }
+    }
+    return $guardaIndice;
+}
 
 ?>
