@@ -57,9 +57,89 @@
         <p>¿En qué fecha iniciarías tu aventura épica, <?php $_SESSION["nombrePersonaje"] ?>? (solo se evalúa el mes y el día)</p>
         <input type="date" name="pregunta4" min="2025-01-01" max="2025-12-31">
 
+        <br><br>
+        <input type="submit" value="Conocer Clase">
+
 
     </form>
     <?php
+
+        if(isset($_REQUEST["pregunta1"])){
+            $_SESSION["respuesta1Clase"] = $_REQUEST["pregunta1"];
+        }
+        if(isset($_REQUEST["pregunta2"])){
+            $_SESSION["respuesta2Clase"] = $_REQUEST["pregunta2"];
+        }
+        if(isset($_REQUEST["pregunta3"])){
+            $_SESSION["respuesta3Clase"] = $_REQUEST["pregunta3"];
+        }
+        if(isset($_REQUEST["pregunta4"])){
+            $_SESSION["respuesta4Clase"] = $_REQUEST["pregunta4"];
+        }
+
+        //echo "Respuestas: ".$_SESSION["respuesta1Clase"]." , ".$_SESSION["respuesta2Clase"]." , ".$_SESSION["respuesta3Clase"]." , ".$_SESSION["respuesta4Clase"];
+
+        //Creación de un array que contendrá los puntos que tiene cada clase 
+        for($i = 0; $i < 12; $i++){
+            $clases[$i] = 0;
+        }
+
+        /*
+            En el array "clases":
+            (Clase-índice) 
+            Barbaro - 0
+            Bardo - 1
+            Brujo - 2
+            Clerigo - 3
+            Druida - 4
+            Explorador - 5
+            Guerrero - 6
+            Hechicero - 7
+            Mago - 8
+            Monje - 9
+            Paladin - 10
+            Pícaro - 11
+
+        */
+
+        //Asignación de puntos según las respuestas de la pregunta 1
+        if($_SESSION["respuesta1Clase"] == 1){
+            $clases[11]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 2){
+            $_SESSION[9]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 3){
+            $_SESSION[5]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 4 || $_SESSION["respuesta1Clase"] == 5){
+            $_SESSION[6]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 6 || $_SESSION["respuesta1Clase"] == 7){
+            $_SESSION[10]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 8 || $_SESSION["respuesta1Clase"] == 9){
+            $_SESSION[0]++;
+        }
+        else if($_SESSION["respuesta1Clase"] >= 10 && $_SESSION["respuesta1Clase"] <= 12){
+            $_SESSION[3]++;
+        }
+        else if($_SESSION["respuesta1Clase"] >= 13 && $_SESSION["respuesta1Clase"] <= 15){
+            $_SESSION[4]++;
+        }
+        else if($_SESSION["respuesta1Clase"] >= 16 && $_SESSION["respuesta1Clase"] <= 18){
+            $_SESSION[1]++;
+        }
+        else if($_SESSION["respuesta1Clase"] == 19 || $_SESSION["respuesta1Clase"] == 20){
+            $_SESSION[2]++;
+        }else{
+            $clases[7]++;
+            $clases[8]++;
+        }
+
+
+        //Asignación de puntos en función de las respuestas de la pregunta 2
+
         /*
             Barbaro = rojo
             Bardo = cian
@@ -73,8 +153,148 @@
             Monje = amarillo
             Paladin = azul oscuro
             Pícaro = negro
-
         */
+
+        include "funciones.php";
+        $colorDominante = cogeColorDominante($_SESSION["respuesta2Clase"]);
+
+        if($colorDominante == "Rojo"){
+            $clases[0]++;
+            $clases[4]++;
+        }
+        else if($colorDominante == "Verde"){
+            $clases[5]++;
+        }
+        else if($colorDominante == "Azul"){
+            $clases[8]++;
+            $clases[4]++;
+        }
+        else if($colorDominante == "Amarillo"){
+            $clases[9]++;
+            $clases[7]++;
+        }
+        else if($colorDominante == "Magenta"){
+            $clases[2]++;
+        }
+        else if($colorDominante == "Blanco"){
+            $clases[3]++;
+            $clases[4]++;
+        }
+        else if($colorDominante == "Cian"){
+            $clases[1]++;
+        }else{
+            $clases[11]++;
+            $clases[6]++;
+            $clases[10]++;
+        }
+
+
+        //Asignación de puntos en función de las respuestas de la pregunta 3
+
+        if($_SESSION["respuesta3Clase"] == 0){
+            $clases[11]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 1){
+            $_SESSION[9]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 2){
+            $_SESSION[5]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 3 || $_SESSION["respuesta3Clase"] == 4){
+            $_SESSION[6]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 5 || $_SESSION["respuesta3Clase"] == 6){
+            $_SESSION[10]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 7 || $_SESSION["respuesta3Clase"] == 8){
+            $_SESSION[0]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 9 || $_SESSION["respuesta3Clase"] == 10){
+            $_SESSION[3]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 11 || $_SESSION["respuesta3Clase"] == 12){
+            $_SESSION[4]++;
+        }
+        else if($_SESSION["respuesta3Clase"] >= 13 && $_SESSION["respuesta3Clase"] <= 15){
+            $_SESSION[1]++;
+        }
+        else if($_SESSION["respuesta3Clase"] >= 16 && $_SESSION["respuesta3Clase"] <= 18){
+            $_SESSION[2]++;
+        }
+        else if($_SESSION["respuesta3Clase"] == 19 || $_SESSION["respuesta3Clase"] == 20){
+            $_SESSION[7]++;
+        }else{
+            $clases[8]++;
+        }
+
+        //Asignación de puntos en función de las respuestas de la pregunta 4
+        $fechaIntroducida = strtotime($_SESSION["respuesta4Clase"]);
+        $mesIntroducido = date("n", $fechaIntroducida); //devuelve solo el mes introducido, "n" para que te devuelva el mes sin 0s a la izquierda
+
+        if($mesIntroducido == 1){
+            $clases[5]++;
+            $clases[6]++;
+            $clases[10]++;
+        }
+        else if($mesIntroducido == 2){
+            $clases[0]++;
+            $clases[2]++;
+            $clases[9]++;
+        }
+        else if($mesIntroducido == 3){
+            $clases[3]++;
+            $clases[4]++;
+            $clases[7]++;
+        }
+        else if($mesIntroducido == 4){
+            $clases[1]++;
+            $clases[8]++;
+            $clases[11]++;
+        }
+        else if($mesIntroducido == 5){
+            $clases[4]++;
+        }
+        else if($mesIntroducido == 6){
+            $clases[9]++;
+            $clases[10]++;
+        }
+        else if($mesIntroducido == 7){
+            $clases[2]++;
+            $clases[3]++;
+            $clases[7]++;
+        }
+        else if($mesIntroducido == 8){
+            $clases[1]++;
+            $clases[8]++;
+            $clases[11]++;
+        }
+        else if($mesIntroducido == 9){
+            $clases[4]++;
+            $clases[5]++;
+            $clases[6]++;
+        }
+        else if($mesIntroducido == 10){
+            $clases[0]++;
+            $clases[2]++;
+            $clases[10]++;
+        }
+        else if($mesIntroducido == 11){
+            $clases[3]++;
+            $clases[7]++;
+            $clases[8]++;
+        }
+        else{
+            $clases[1]++;
+            $clases[2]++;
+            $clases[11]++;
+        }
+
+        
+
+
+
+
+
     ?>
     
 </body>
