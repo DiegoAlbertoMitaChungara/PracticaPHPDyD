@@ -301,8 +301,71 @@
     </p>
 
     <form action="pagina4.php" method="post">
+        <p>Generar estadísticas aleatorias</p>
+        <input type="button" value="Generar" onclick="">
         <input type="submit" value="Enviar">
     </form>
+
+    <p id="resultado"></p>
+
+    <?php
+        function generaEstadisticas(){
+            for($i = 0; $i < 6; $i++){
+                $estadisticas[$i] = rand(1,20);
+            }
+
+            /*
+                En el array de estadísticas: (valor-índice)
+                Inteligencia - 0
+                Fuerza - 1
+                Destreza - 2
+                Constitución - 3
+                Sabiduría - 4
+                Carisma - 5
+            */
+
+            $raza = $_SESSION["razaPersonaje"];
+
+            if($raza == "dracónido"){
+                $estadisticas[5]+=2;
+                $estadisticas[1]++;
+            }else if($raza == "elfo"){
+                $estadisticas[2]+=2;
+                $estadisticas[4]++;
+            }else if($raza == "enano"){
+                $estadisticas[3]+=2;
+                $estadisticas[4]++;
+            }else if($raza == "gnomo"){
+                $estadisticas[0]+=2;
+                $estadisticas[3]++;
+            }else if($raza == "humano"){
+                $estadisticas[0]++;
+                $estadisticas[1]++;
+                $estadisticas[2]++;
+                $estadisticas[3]++;
+                $estadisticas[4]++;
+                $estadisticas[5]++;
+            }else if($raza == "mediano"){
+                $estadisticas[2]+=2;
+                $estadisticas[3]++;
+            }else if($raza == "semielfo"){
+                $estadisticas[5]+=2;
+                $estadisticas[2]++;
+                $estadisticas[4]++;
+            }
+            else if($raza == "semiorco"){
+                $estadisticas[1]+=2;
+                $estadisticas[3]++;
+            }else{
+                $estadisticas[5]+=2;
+                $estadisticas[0]++;
+            }
+
+            return $estadisticas;
+        }
+
+
+    ?>
 
 </body>
 </html>
