@@ -8,7 +8,7 @@
 <?php
     session_start();
 
-    echo"Definitivamente perteneces a la raza de los ".$_SESSION["raza"];
+    echo"Definitivamente perteneces a la raza de los ".$_SESSION["razaPersonaje"].", ".$_SESSION["nombrePersonaje"];
 ?>
 <body>
     <h1>Clases de Dungeons & Dragons</h1>
@@ -39,7 +39,7 @@
         <strong>Pícaro:</strong> Especialista en el sigilo, la astucia y los trucos, ideal para emboscadas y para aprovechar la precisión en el combate.
     </p>
 
-    <form action="pagina2.php" method="POST">
+    <form action="pagina3.php" method="POST">
 
         <!-- Pregunta 1 -->
         <p>¿A cuántos enemigos preferirías enfrentar en combate, <?php $_SESSION["nombrePersonaje"] ?>?</p>
@@ -290,12 +290,54 @@
         }
 
         
-        print_r($clases);
+        //Elección de clase ganadora
+        $claseGanadora = indiceElementoMayor($clases);
 
-        print indiceElementoMayor($clases);
+        /*
+            En el array "clases":
+            (Clase-índice) 
+            Barbaro - 0
+            Bardo - 1
+            Brujo - 2
+            Clerigo - 3
+            Druida - 4
+            Explorador - 5
+            Guerrero - 6
+            Hechicero - 7
+            Mago - 8
+            Monje - 9
+            Paladin - 10
+            Pícaro - 11
 
+        */
 
-
+        if($claseGanadora == 0){
+            $_SESSION["clasePersonaje"] = "barbaro";
+        }else if($claseGanadora == 1){
+            $_SESSION["clasePersonaje"] = "bardo";
+        }else if($claseGanadora == 2){
+            $_SESSION["clasePersonaje"] = "brujo";
+        }else if($claseGanadora == 3){
+            $_SESSION["clasePersonaje"] = "clérigo";
+        }else if($claseGanadora == 4){
+            $_SESSION["clasePersonaje"] = "druida";
+        }else if($claseGanadora == 5){
+            $_SESSION["clasePersonaje"] = "explorador";
+        }else if($claseGanadora == 6){
+            $_SESSION["clasePersonaje"] = "guerrero";
+        }else if($claseGanadora == 7){
+            $_SESSION["clasePersonaje"] = "hechicero";
+        }else if($claseGanadora == 8){
+            $_SESSION["clasePersonaje"] = "mago";
+        }else if($claseGanadora == 9){
+            $_SESSION["clasePersonaje"] = "monje";
+        }else if($claseGanadora == 10){
+            $_SESSION["clasePersonaje"] = "paladín";
+        }else if($claseGanadora == 11){
+            $_SESSION["clasePersonaje"] = "druida";
+        }else{
+            $_SESSION["clasePersonaje"] = "pícaro";
+        }
 
     ?>
     

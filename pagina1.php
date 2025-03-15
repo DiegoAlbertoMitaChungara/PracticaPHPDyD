@@ -24,6 +24,9 @@
 
 
     <h1>Razas de Dungeons & Dragons</h1>
+    <?php
+        echo "¡Hola, ".$_SESSION["nombrePersonaje"]."!";
+    ?>
     <p>
         En Dungeons & Dragons existen diversas razas con características únicas. Algunas de las principales son:
         <br><br>
@@ -48,7 +51,7 @@
 
     
     <h2>Formulario de Creación de Personaje</h2>
-    <form method="POST" action="pagina1.php">
+    <form method="POST" action="pagina2.php">
         <!-- Pregunta 1: Select -->
         <?php
             echo "<p>¿Sientes que en tu interior arde una llama ancestral como si llevaras la fuerza de un linaje mítico, ".$_SESSION["nombrePersonaje"]."?</p>"
@@ -496,7 +499,30 @@
 
             }
 
-            print_r($_SESSION);
+            //Elección de raza ganadora
+
+            include "funciones.php";
+            $razaGandora = indiceElementoMayor($raza);
+
+            if($razaGanadora == 0){
+                $_SESSION["razaPersonaje"] = "dracónido";
+            }else if($razaGanadora == 1){
+                $_SESSION["razaPersonaje"] = "elfo";
+            }else if($razaGanadora == 2){
+                $_SESSION["razaPersonaje"] = "eneno";
+            }else if($razaGanadora == 3){
+                $_SESSION["razaPersonaje"] = "gnomo";
+            }else if($razaGanadora == 4){
+                $_SESSION["razaPersonaje"] = "humano";
+            }else if($razaGanadora == 5){
+                $_SESSION["razaPersonaje"] = "mediano";
+            }else if($razaGanadora == 6){
+                $_SESSION["razaPersonaje"] = "semielfo";
+            }else if($razaGanadora == 7){
+                $_SESSION["razaPersonaje"] = "semiorco";
+            }else{
+                $_SESSION["razaPersonaje"] = "tiflin";
+            }
         
         ?>
 
