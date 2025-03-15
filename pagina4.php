@@ -6,6 +6,10 @@
     <title>Página 4</title>
 </head>
 <body>
+    <?php
+        session_start();
+        echo "Definitavemnte eres un ".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"];
+    ?>
     <h1>Habilidades de Dungeons & Dragons</h1>
         <p>
             En Dungeons & Dragons existen diversas habilidades únicas. Algunas de las principales son:
