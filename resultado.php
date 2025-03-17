@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
 </head>
-<body>
-    <?php
+<?php
     if(isset($_REQUEST["pregunta1.1H"])){
         $_SESSION["respuesta1Habilidad"] = $_REQUEST["pregunta1.1H"];
     }else{
@@ -98,5 +97,7 @@
         $_SESSION["respuesta18Habilidad"] = "No";
     }
     ?>
+<body>
+    
 </body>
 </html>
