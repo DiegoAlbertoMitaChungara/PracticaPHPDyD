@@ -9,6 +9,122 @@
     <?php
         session_start();
         echo "Definitavemnte eres un ".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"];
+
+        //Asignamos las estadísticas generadas aleatoriamente en pagina3.php y las guardamos en un array asociativo ($estadistica)     
+
+        if(isset($_REQUEST["carInteligencia"])){
+            $estadisticas["Inteligencia"] = $_REQUEST["carInteligencia"];
+        }
+        if(isset($_REQUEST["carFuerza"])){
+            $estadisticas["Fuerza"] = $_REQUEST["carFuerza"];
+        }
+        if(isset($_REQUEST["carDestreza"])){
+            $estadisticas["Destreza"] = $_REQUEST["carDestreza"];
+        }
+        if(isset($_REQUEST["carConstitucion"])){
+            $estadisticas["Constitucion"] = $_REQUEST["carConstitucion"];
+        }
+        if(isset($_REQUEST["carSabiduria"])){
+            $estadisticas["Sabiduria"] = $_REQUEST["carSabiduria"];
+        }
+        if(isset($_REQUEST["carCarisma"])){
+            $estadisticas["Carisma"] = $_REQUEST["carCarisma"];
+        }
+
+
+        //Asignación de puntos de carcaterística extra según raza
+        $raza = $_SESSION["razaPersonaje"]; 
+
+        if($raza == "dracónido"){
+            $estadisticas["Carisma"]+=2;
+            $estadisticas["Fuerza"]++;
+        }else if($raza == "elfo"){
+            $estadisticas["Destreza"]+=2;
+            $estadisticas["Sabiduria"]++;
+        }else if($raza == "enano"){
+            $estadisticas["Constitucion"]+=2;
+            $estadisticas["Sabiduria"]++;
+        }else if($raza == "gnomo"){
+            $estadisticas["Inteligencia"]+=2;
+            $estadisticas["Constitucion"]++;
+        }else if($raza == "humano"){
+            $estadisticas["Inteligencia"]++;
+            $estadisticas["Fuerza"]++;
+            $estadisticas["Destreza"]++;
+            $estadisticas["Constitucion"]++;
+            $estadisticas["Sabiduria"]++;
+            $estadisticas["Carisma"]++;
+        }else if($raza == "mediano"){
+            $estadisticas["Destreza"]+=2;
+            $estadisticas["Constitucion"]++;
+        }else if($raza == "semielfo"){
+            $estadisticas["Carisma"]+=2;
+            $estadisticas["Destreza"]++;
+            $estadisticas["Sabiduria"]++;
+        }
+        else if($raza == "semiorco"){
+            $estadisticas["Fuerza"]+=2;
+            $estadisticas["Constitucion"]++;
+        }else{
+            $estadisticas["Carisma"]+=2;
+            $estadisticas["Inteligencia"]++;
+        }
+
+        //Asignación de puntos de característica extra según la clase
+
+        $clase = $_SESSION["clasePersonaje"];
+
+        if($clase == "barbaro"){
+            $estadisticas["Fuerza"]++;
+            $estadisticas["Constitucion"]++;
+
+        }else if($clase == "bardo"){
+            $estadisticas["Carisma"]++;
+
+        }else if($clase == "brujo"){
+            $estadisticas["Carisma"]++;
+
+        }else if($clase == "clerigo"){
+            $estadisticas["Sabiduria"]++;
+
+        }else if($clase == "druida"){
+            $estadisticas["Sabiduria"]++;
+
+        }else if($clase == "explorador"){
+            $estadisticas["Destreza"]++;
+            $estadisticas["Sabiduria"]++;
+
+        }else if($clase == "guerrero"){
+            $estadisticas["Fuerza"]++;
+
+            $estadisticas["Constitucion"]++;
+
+        }else if($clase == "hechicero"){
+            $estadisticas["Carisma"]++;
+
+        }else if($clase == "mago"){
+            $estadisticas["Inteligencia"]++;
+
+        }else if($clase == "monje"){
+            $estadisticas["Destreza"]++;
+            $estadisticas["Sabiduria"]++;
+
+        }else if($clase == "paladin"){
+            $estadisticas["Fuerza"]++;
+            $estadisticas["Carisma"]++;
+
+        }else{
+            $estadisticas["Destreza"]++;
+        }
+        
+
+        $_SESSION["puntosInteligencia"] = $estadisticas[0];
+        $_SESSION["puntosFuerza"] = $estadisticas[1];
+        $_SESSION["puntosDestreza"] = $estadisticas[2];
+        $_SESSION["puntosConstitucion"] = $estadisticas[3];
+        $_SESSION["puntosSabiduria"] = $estadisticas[4];
+        $_SESSION["puntosCarisma"] = $estadisticas[5];
+
     ?>
     <h1>Habilidades de Dungeons & Dragons</h1>
         <p>
