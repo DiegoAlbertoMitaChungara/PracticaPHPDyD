@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="pagina1.php">
+    <form action="pagina1.php" method="POST">
         <p>Nombre: <input type="text" name="nombre" method="get"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
