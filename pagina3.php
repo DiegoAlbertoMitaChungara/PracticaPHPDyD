@@ -301,15 +301,44 @@
     </p>
 
     <form action="pagina4.php" method="post">
-        <p>Generar estadísticas aleatorias</p>
-        <input type="button" value="Generar" onclick="">
+        <span>Inteligencia: </span>
+        <input type="text" name="carInteligencia" id="numInteligencia" class="estadisticas" size="1" value="0" readonly><br>
+
+        <span>Fuerza: </span>
+        <input type="text" name="carFuerza" id="numFuerza" class="estadisticas" size="1" value="0" readonly><br>
+
+        <span>Destreza: </span>
+        <input type="text" name="carDestreza" id="numDestreza" class="estadisticas" size="1" value="0" readonly><br>
+
+        <span>Constitución: </span>
+        <input type="text" name="carConstitucion" id="numConstitucion" class="estadisticas" size="1" value="0" readonly><br>
+
+        <span>Sabiduría: </span>
+        <input type="text" name="carSabiduria" id="numSabiduria" class="estadisticas" size="1" value="0" readonly><br>
+
+        <span>Carisma</span>
+        <input type="text" name="carCarisma" id="numCarisma" class="estadisticas" size="1" value="0" readonly><br>
+
+        <input type="button" value="Generar Estadísticas" onclick="generaEstadisticasAleatorias()">
         <input type="submit" value="Enviar">
     </form>
 
-    <p id="resultado"></p>
+    <script>
 
-    <?php
-        function generaEstadisticas(){
+        function generaEstadisticasAleatorias(){
+            const inputs = document.querySelectorAll(".estadisticas");
+
+            inputs.forEach(input => {
+                input.value = Math.floor(Math.random()*20)+1;
+            })
+        }
+
+    </script>
+
+
+
+        <!--
+            function generaEstadisticas(){
             for($i = 0; $i < 6; $i++){
                 $estadisticas[$i] = rand(1,20);
             }
@@ -325,6 +354,7 @@
             */
 
             $raza = $_SESSION["razaPersonaje"];
+            $clase = $_SESSION["clasePersonaje"];
 
             if($raza == "dracónido"){
                 $estadisticas[5]+=2;
@@ -361,11 +391,48 @@
                 $estadisticas[0]++;
             }
 
-            return $estadisticas;
-        }
+            if($clase == "barbaro"){
+                $estadisticas[1]++;
+                $estadisticas[3]++;
+            }else if($clase == "bardo"){
+                $estadisticas[5]++;
+            }else if($clase == "brujo"){
+                $estadisticas[5]++;
 
+            }else if($clase == "clerigo"){
+                $estadisticas[4]++;
+            }else if($clase == "druida"){
+                $estadisticas[4]++;
+            }else if($clase == "explorador"){
+                $estadisticas[2]++;
+                $estadisticas[4]++;
+            }else if($clase == "guerrero"){
+                $estadisticas[1]++;
+                $estadisticas[3]++;
+            }else if($clase == "hechicero"){
+                $estadisticas[5]++;
+            }else if($clase == "mago"){
+                $estadisticas[0]++;
+            }else if($clase == "monje"){
+                $estadisticas[2]++;
+                $estadisticas[4]++;
+            }else if($clase == "paladin"){
+                $estadisticas[1]++;
+                $estadisticas[5]++;
+            }else{
+                $estadisticas[2]++;
+            }
 
-    ?>
+            $_SESSION["inteligencia"] = $estadisticas[0];
+            $_SESSION["fuerza"] = $estadisticas[1];
+            $_SESSION["destreza"] = $estadisticas[2];
+            $_SESSION["constitucion"] = $estadisticas[3];
+            $_SESSION["sabiduria"] = $estadisticas[4];
+            $_SESSION["carisma"] = $estadisticas[5];
+
+        } 
+        -->
+
 
 </body>
 </html>
