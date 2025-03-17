@@ -165,5 +165,49 @@
             <br>
             <strong>Supervivencia (Sabiduría):</strong> Ayuda a orientarse en la naturaleza, rastrear criaturas y encontrar recursos en entornos salvajes.
         </p>
+
+
+        <!-- Pregunta 3: Checkbox -->
+        <?php
+            echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
+        ?>
+
+        <form action="resultado.php" method="post">
+            <input type="checkbox" name="pregunta1.1H" value="Si"> Acrobacias
+            <br>
+            <input type="checkbox" name="pregunta1.2H" value="Si"> Trato con animales
+            <br>
+            <input type="checkbox" name="pregunta1.3H" value="Si"> Arcano
+            <br>
+            <input type="checkbox" name="pregunta1.4H" value="Si"> Atletismo
+            <br>
+            <input type="checkbox" name="pregunta1.5H" value="Si"> Engaño
+            <br>
+            <input type="checkbox" name="pregunta1.6H" value="Si"> Historia
+            <br>
+            <input type="checkbox" name="pregunta1.7H" value="Si"> Perspicacia
+            <br>
+            <input type="checkbox" name="pregunta1.8H" value="Si"> Intimidación
+            <br>
+            <input type="checkbox" name="pregunta1.9H" value="Si"> Investigación
+            <br>
+            <input type="checkbox" name="pregunta1.10H" value="Si"> Medicina
+            <br>
+            <input type="checkbox" name="pregunta1.11H" value="Si"> Naturaleza
+            <br>
+            <input type="checkbox" name="pregunta1.12H" value="Si"> Percepción
+            <br>
+            <input type="checkbox" name="pregunta1.13H" value="Si"> Interpretación
+            <br>
+            <input type="checkbox" name="pregunta1.14H" value="Si"> Persuasión
+            <br>
+            <input type="checkbox" name="pregunta1.15H" value="Si"> Religión
+            <br>
+            <input type="checkbox" name="pregunta1.16H" value="Si"> Truco Rumano
+            <br>
+            <input type="checkbox" name="pregunta1.17H" value="Si"> Sigilo
+            <br>
+            <input type="checkbox" name="pregunta1.18H" value="Si"> Supervivencia
+        </form>
 </body>
 </html>
