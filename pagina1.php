@@ -51,7 +51,7 @@
 
     
     <h2>Formulario de Creación de Personaje</h2>
-    <form method="POST" action="pagina2.php">
+    <form action="pagina2.php" method="POST">
         <!-- Pregunta 1: Select -->
         <?php
             echo "<p>¿Sientes que en tu interior arde una llama ancestral como si llevaras la fuerza de un linaje mítico, ".$_SESSION["nombrePersonaje"]."?</p>"

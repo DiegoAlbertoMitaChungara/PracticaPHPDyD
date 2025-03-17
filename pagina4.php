@@ -172,7 +172,7 @@
             echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <form action="resultado.php" method="post">
+        <form action="resultado.php" method="POST">
             <input type="checkbox" name="pregunta1.1H" value="Si"> Acrobacias
             <br>
             <input type="checkbox" name="pregunta1.2H" value="Si"> Trato con animales

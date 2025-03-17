@@ -300,7 +300,7 @@
         <strong>Carisma:</strong> El Carisma mide la fuerza de la personalidad, la capacidad de persuasión y el magnetismo personal. Un alto Carisma permite a los personajes liderar, inspirar y negociar de manera efectiva. Es vital para aquellas clases que se centran en la interacción social y en la magia basada en la fuerza de voluntad, como los bardos, hechiceros y paladines. Un personaje carismático puede influir en amigos y enemigos, moldeando situaciones a su favor mediante la diplomacia o la intimidación.
     </p>
 
-    <form action="pagina4.php" method="post">
+    <form action="pagina4.php" method="POST">
         <span>Inteligencia: </span>
         <input type="text" name="carInteligencia" id="numInteligencia" class="estadisticas" size="1" value="0" readonly><br>
 
