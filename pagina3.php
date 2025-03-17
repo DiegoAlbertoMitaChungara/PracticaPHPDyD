@@ -330,7 +330,7 @@
 
             inputs.forEach(input => {
                 input.value = Math.floor(Math.random()*20)+1;
-            })
+            });
         }
 
     </script>

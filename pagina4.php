@@ -71,7 +71,6 @@
         }
 
         //Asignación de puntos de característica extra según la clase
-
         $clase = $_SESSION["clasePersonaje"];
 
         if($clase == "barbaro"){
@@ -118,12 +117,12 @@
         }
         
 
-        $_SESSION["puntosInteligencia"] = $estadisticas[0];
-        $_SESSION["puntosFuerza"] = $estadisticas[1];
-        $_SESSION["puntosDestreza"] = $estadisticas[2];
-        $_SESSION["puntosConstitucion"] = $estadisticas[3];
-        $_SESSION["puntosSabiduria"] = $estadisticas[4];
-        $_SESSION["puntosCarisma"] = $estadisticas[5];
+        $_SESSION["puntosInteligencia"] = $estadisticas["Inteligencia"];
+        $_SESSION["puntosFuerza"] = $estadisticas["Fuerza"];
+        $_SESSION["puntosDestreza"] = $estadisticas["Destreza"];
+        $_SESSION["puntosConstitucion"] = $estadisticas["Constitucion"];
+        $_SESSION["puntosSabiduria"] = $estadisticas["Sabiduria"];
+        $_SESSION["puntosCarisma"] = $estadisticas["Carisma"];
 
     ?>
     <h1>Habilidades de Dungeons & Dragons</h1>
