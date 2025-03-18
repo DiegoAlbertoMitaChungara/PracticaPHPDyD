@@ -172,42 +172,56 @@
             echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <form action="resultado.php" method="POST">
-            <input type="checkbox" name="pregunta1.1H" value="Si"> Acrobacias
+        <form action="resultado.php" method="POST" onsubmit="verificaCheckboxes(event)">
+            <input type="checkbox" name="pregunta1.1H" class="checkboxes" value="Si"> Acrobacias
             <br>
-            <input type="checkbox" name="pregunta1.2H" value="Si"> Trato con animales
+            <input type="checkbox" name="pregunta1.2H" class="checkboxes" value="Si"> Trato con animales
             <br>
-            <input type="checkbox" name="pregunta1.3H" value="Si"> Arcano
+            <input type="checkbox" name="pregunta1.3H" class="checkboxes" value="Si"> Arcano
             <br>
-            <input type="checkbox" name="pregunta1.4H" value="Si"> Atletismo
+            <input type="checkbox" name="pregunta1.4H" class="checkboxes" value="Si"> Atletismo
             <br>
-            <input type="checkbox" name="pregunta1.5H" value="Si"> Engaño
+            <input type="checkbox" name="pregunta1.5H" class="checkboxes" value="Si"> Engaño
             <br>
-            <input type="checkbox" name="pregunta1.6H" value="Si"> Historia
+            <input type="checkbox" name="pregunta1.6H" class="checkboxes" value="Si"> Historia
             <br>
-            <input type="checkbox" name="pregunta1.7H" value="Si"> Perspicacia
+            <input type="checkbox" name="pregunta1.7H" class="checkboxes" value="Si"> Perspicacia
             <br>
-            <input type="checkbox" name="pregunta1.8H" value="Si"> Intimidación
+            <input type="checkbox" name="pregunta1.8H" class="checkboxes" value="Si"> Intimidación
             <br>
-            <input type="checkbox" name="pregunta1.9H" value="Si"> Investigación
+            <input type="checkbox" name="pregunta1.9H" class="checkboxes" value="Si"> Investigación
             <br>
-            <input type="checkbox" name="pregunta1.10H" value="Si"> Medicina
+            <input type="checkbox" name="pregunta1.10H" class="checkboxes" value="Si"> Medicina
             <br>
-            <input type="checkbox" name="pregunta1.11H" value="Si"> Naturaleza
+            <input type="checkbox" name="pregunta1.11H" class="checkboxes" value="Si"> Naturaleza
             <br>
-            <input type="checkbox" name="pregunta1.12H" value="Si"> Percepción
+            <input type="checkbox" name="pregunta1.12H" class="checkboxes" value="Si"> Percepción
             <br>
-            <input type="checkbox" name="pregunta1.13H" value="Si"> Interpretación
+            <input type="checkbox" name="pregunta1.13H" class="checkboxes" value="Si"> Interpretación
             <br>
-            <input type="checkbox" name="pregunta1.14H" value="Si"> Persuasión
+            <input type="checkbox" name="pregunta1.14H" class="checkboxes" value="Si"> Persuasión
             <br>
-            <input type="checkbox" name="pregunta1.15H" value="Si"> Religión
+            <input type="checkbox" name="pregunta1.15H" class="checkboxes" value="Si"> Religión
             <br>
-            <input type="checkbox" name="pregunta1.16H" value="Si"> Truco Rumano
+            <input type="checkbox" name="pregunta1.16H" class="checkboxes" value="Si"> Truco Rumano
             <br>
-            <input type="checkbox" name="pregunta1.17H" value="Si"> Sigilo
+            <input type="checkbox" name="pregunta1.17H" class="checkboxes" value="Si"> Sigilo
             <br>
-            <input type="checkbox" name="pregunta1.18H" value="Si"> Supervivencia
+            <input type="checkbox" name="pregunta1.18H" class="checkboxes" value="Si"> Supervivencia
+            <br>
+            <input type="submit" value="Enviar">
         </form>
+
+        <script>
+            function verificaCheckboxes(evento){
+                const inputs = document.querySelectorAll(".checkboxes:checked");
+
+                if(inputs.length < 4 || inputs.length > 8){
+                    alert("Por favor seleccione entre 4 y 8 opciones");
+                    evento.preventDefault();
+                }
+            }
+
+        </script>
 </body>
 </html>
