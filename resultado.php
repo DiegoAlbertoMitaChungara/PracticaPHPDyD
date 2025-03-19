@@ -91,23 +91,23 @@
     }else{
         $_SESSION["respuesta14Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta15.1H"])){
+    if(isset($_REQUEST["pregunta1.15H"])){
         $_SESSION["respuesta15Habilidad"] = $_REQUEST["pregunta1.15H"];
     }else{
         $_SESSION["respuesta15Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta16.1H"])){
+    if(isset($_REQUEST["pregunta1.16H"])){
         $_SESSION["respuesta16Habilidad"] = $_REQUEST["pregunta1.16H"];
     }else{
         $_SESSION["respuesta16Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.7H"])){
+    if(isset($_REQUEST["pregunta1.17H"])){
         $_SESSION["respuesta17Habilidad"] = $_REQUEST["pregunta1.17H"];
     }else{
         $_SESSION["respuesta17Habilidad"] = "No";
     }
     if(isset($_REQUEST["pregunta1.18H"])){
-        $_SESSION["respuesta1Habilidad"] = $_REQUEST["pregunta1.18H"];
+        $_SESSION["respuesta18Habilidad"] = $_REQUEST["pregunta1.18H"];
     }else{
         $_SESSION["respuesta18Habilidad"] = "No";
     }
