@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+<style>
+    table {
+            text-align: center;
+            font-family: Arial, sans-serif;
+    }
+    th {
+        background-color: slateblue !important;
+    }
+    td {
+        background-color: lightgreen !important;
+    }
+</style>
 <?php
     session_start();
 
     if(isset($_REQUEST["pregunta1.1H"])){
-        $_SESSION["respuesta1Habilidad"] = $_REQUEST["pregunta1.1H"];
+        $_SESSION["respuesta1Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta1Habilidad"] = "No";
     }
@@ -108,6 +121,191 @@
     Hoy, este "."<strong>".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"]."</strong>"." continúa su viaje, guiado por un firme código moral heredado de sus ancestros y por la convicción de que cada acción, cada decisión, moldea el futuro de su raza y del mundo que lo rodea.</p>"
     ?>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered border-primary">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Raza</th>
+                        <th>Clase</th>
+                        <th>Arma</th>
+                    </tr>
+                    <tr>
+                        <td><?php
+                        echo $_SESSION["nombrePersonaje"]
+                        ?></td>
+                        <td><?php
+                        echo $_SESSION["razaPersonaje"]
+                        ?></td>
+                        <td><?php
+                        echo $_SESSION["clasePersonaje"]
+                        ?></td>
+                        <td><?php
+                        echo $_SESSION["armaPersonaje"]
+                        ?></td>
+                    </tr>
+                </table>
+                <table class="table table-bordered border-primary">
+                    <tr>
+                        <th>Características</th>
+                        <th>Puntos</th>
+                    </tr>
+                    <tr>
+                        <th>Inteligencia</th>
+                        <td><?php
+                        echo $_SESSION["puntosInteligencia"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Fuerza</th>
+                        <td><?php
+                        echo $_SESSION["puntosFuerza"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Destreza</th>
+                        <td><?php
+                        echo $_SESSION["puntosDestreza"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Constitución</th>
+                        <td><?php
+                        echo $_SESSION["puntosConstitucion"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Sabiduría</th>
+                        <td><?php
+                        echo $_SESSION["puntosSabiduria"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Carisma</th>
+                        <td><?php
+                        echo $_SESSION["puntosCarisma"]
+                        ?></td>
+                    </tr>
+                </table>
+                <table class="table table-bordered border-primary">
+                    <tr>
+                        <th>Habilidad</th>
+                        <th>Puntos</th>
+                    </tr>
+                    <tr>
+                        <th>Acrobacias</th>
+                        <td><?php
+                        echo $_SESSION["respuesta1Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Trato con animales</th>
+                        <td><?php
+                        echo $_SESSION["respuesta2Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Arcano</th>
+                        <td><?php
+                        echo $_SESSION["respuesta3Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Atletismo</th>
+                        <td><?php
+                        echo $_SESSION["respuesta4Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Engaño</th>
+                        <td><?php
+                        echo $_SESSION["respuesta5Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                        <th>Historia</th>
+                        <td><?php
+                        echo $_SESSION["respuesta6Habilidad"]
+                        ?></td>
+                    <tr>
+                        <th>Perspicacia</th>
+                        <td><?php
+                        echo $_SESSION["respuesta7Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Intimidación</th>
+                        <td><?php
+                        echo $_SESSION["respuesta8Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Investigación</th>
+                        <td><?php
+                        echo $_SESSION["respuesta9Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Medicina</th>
+                        <td><?php
+                        echo $_SESSION["respuesta10Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Naturaleza</th>
+                        <td><?php
+                        echo $_SESSION["respuesta11Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Percepción</th>
+                        <td><?php
+                        echo $_SESSION["respuesta12Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Interpretación</th>
+                        <td><?php
+                        echo $_SESSION["respuesta13Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Persuasión</th>
+                        <td><?php
+                        echo $_SESSION["respuesta14Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Religión</th>
+                        <td><?php
+                        echo $_SESSION["respuesta15Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Truco Rumano</th>
+                        <td><?php
+                        echo $_SESSION["respuesta16Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Sigilo</th>
+                        <td><?php
+                        echo $_SESSION["respuesta17Habilidad"]
+                        ?></td>
+                    </tr>
+                    <tr>
+                        <th>Supervivencia</th>
+                        <td><?php
+                        echo $_SESSION["respuesta18Habilidad"]
+                        ?></td>
+                    </tr>
+                </table>
+    
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
