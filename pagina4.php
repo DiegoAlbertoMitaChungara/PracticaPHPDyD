@@ -8,7 +8,7 @@
 <body>
     <?php
         session_start();
-        echo "Definitavemnte eres un ".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"];
+        echo "Definitivamente has nacido para ser un ".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"];
 
         //Asignamos las estadísticas generadas aleatoriamente en pagina3.php y las guardamos en un array asociativo ($estadistica)     
 
