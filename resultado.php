@@ -96,6 +96,18 @@
     }else{
         $_SESSION["respuesta18Habilidad"] = "No";
     }
+
+    //Leer el contenido
+    $json=file_get_contents("datos.json");
+    //Convierte el JSON a un array asociativo
+    $datos=json_decode($json,true);
+    if($datos === null){
+        die("Error al leer los trasfondos");
+    }
+    //Sacar el transfondo adecuado
+    foreach($datos["trasfondos"] as $trasfondo) {
+        //echo algo de la session.$trasfondo["contenido"]
+    }
     ?>
 <body>
     
