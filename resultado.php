@@ -97,66 +97,6 @@
         $_SESSION["respuesta18Habilidad"] = "No";
     }
 
-
-
-
-
-    //Prueba lectura JSON
-    session_start();
-
-    // Leer variables de sesión
-    $var1 = isset($_SESSION['variable1']) ? $_SESSION['variable1'] : null;
-    $var2 = isset($_SESSION['variable2']) ? $_SESSION['variable2'] : null;
-
-    // Verificar que las variables existan
-    if ($var1 === null || $var2 === null) {
-        echo "Las variables de sesión no están definidas.";
-        exit;
-    }
-
-    // Ejemplo: generar una clave a partir de las dos variables.
-    // Dependiendo de cómo necesites evaluar la combinación, puedes ajustar este paso.
-    $clave = $var1 . "_" . $var2;
-
-    // Array de combinaciones: cada combinación se asocia a un id único del JSON.
-    // Deberás definir las 108 combinaciones aquí.
-    $combinaciones = [
-        'valor1_valor2'       => 'id1',
-        'valor1_otroValor'    => 'id2',
-        // Agrega todas las demás combinaciones...
-    ];
-
-    // Validar que la combinación exista
-    if (!array_key_exists($clave, $combinaciones)) {
-        echo "Combinación no válida.";
-        exit;
-    }
-
-    $idBuscado = $combinaciones[$clave];
-
-    // Ruta del archivo JSON
-    $jsonFile = 'trasfondos.json';
-
-    // Verificar que el archivo exista
-    if (!file_exists($jsonFile)) {
-        echo "Archivo JSON no encontrado.";
-        exit;
-    }
-
-
-    //Leer el contenido
-    $json=file_get_contents("trasfondos.json");
-    //Convierte el JSON a un array asociativo
-    $datos=json_decode($json,true);
-    if($datos === null){
-        die("Error al leer los trasfondos");
-    }
-    if (isset($datos[$idBuscado])) {
-        $texto = $datos[$idBuscado];
-        echo $texto;
-    } else {
-        echo "Texto no encontrado para el id: " . $idBuscado;
-    }
     ?>
 <body>
     
