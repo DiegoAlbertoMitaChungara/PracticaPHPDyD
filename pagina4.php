@@ -202,7 +202,7 @@
 
             <form action="resultado.php" method="POST" onsubmit="verificaCheckboxes(event)">
                 <div class="mb-3" id="checkboxes">
-                    <label>Selecciona los adjetivos que mejor describen tu personalidad, <?php echo $_SESSION["nombrePersonaje"]?></label>
+                    <label>Selecciona las habilidades que mejor describen tu personalidad, <?php echo $_SESSION["nombrePersonaje"]?></label>
 
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="pregunta1.1H" value="Si">
