@@ -7,6 +7,14 @@
     <title>Página 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
+        #titulo{
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 15px;
+            text-align: center;
+            align-content: center;
+            background-color: slateblue;
+        }
         #formulario{
             padding: 2%;
             border: 2px solid black;
@@ -16,14 +24,6 @@
             justify-content: center;
             align-items: center;
             background-color: lightgreen;
-        }
-        #titulo{
-            height: 150px;
-            border: 2px solid black;
-            border-radius: 15px;
-            text-align: center;
-            align-content: center;
-            background-color: slateblue;
         }
     </style>
 </head>
