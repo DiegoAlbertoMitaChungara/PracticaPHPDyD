@@ -6,6 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Insertar Nombre</title>
     <style>
+        body{
+            background-image: url("https://forgottenrealms.fandom.com/wiki/File:Neverwinter-_Dragonslayer.jpg");
+        }
         #formulario{
             height: 400px;
             border: 2px solid black;
@@ -14,6 +17,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: gray;
         }
         #titulo{
             height: 150px;
@@ -21,6 +25,7 @@
             border-radius: 15px;
             text-align: center;
             align-content: center;
+            background-color: midnightblue;
         }
 
     </style>
@@ -53,7 +58,7 @@
                     <input type="text" name="nombre"required>
                     <div class="form-text">No puedes dejar este campo vacío</div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </div>
         <div class="col-3">
