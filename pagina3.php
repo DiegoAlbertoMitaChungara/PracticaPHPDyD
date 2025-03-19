@@ -20,7 +20,6 @@
         $_SESSION["respuesta4Clase"] = $_REQUEST["pregunta4C"];
     }
     
-    //echo "Respuestas: ".$_SESSION["respuesta1Clase"]." , ".$_SESSION["respuesta2Clase"]." , ".$_SESSION["respuesta3Clase"]." , ".$_SESSION["respuesta4Clase"];
     
     //Creación de un array que contendrá los puntos que tiene cada clase 
     for($i = 0; $i < 12; $i++){

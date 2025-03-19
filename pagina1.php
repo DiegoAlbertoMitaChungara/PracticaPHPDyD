@@ -51,7 +51,7 @@
 
     
     <h2>Formulario de Creación de Personaje</h2>
-    <form action="pagina2.php" method="POST">
+    <form action="pagina2.php" method="POST" onsubmit="verificaCheckboxes(event); verificaCheckboxes2(event)">
         <!-- Pregunta 1: Select -->
         <?php
             echo "<p>¿Sientes que en tu interior arde una llama ancestral como si llevaras la fuerza de un linaje mítico, ".$_SESSION["nombrePersonaje"]."?</p>"
@@ -86,19 +86,19 @@
             echo "<p>Selecciona los adjetivos que mejor describen tu personalidad, ".$_SESSION["nombrePersonaje"]."</p>"
         ?>
 
-        <input type="checkbox" name="pregunta3.1" value="Si"> Valiente
+        <input type="checkbox" name="pregunta3.1" class="checkboxes" value="Si"> Valiente
         <br>
-        <input type="checkbox" name="pregunta3.2" value="Si"> Astuto
+        <input type="checkbox" name="pregunta3.2" class="checkboxes" value="Si"> Astuto
         <br>
-        <input type="checkbox" name="pregunta3.3" value="Si"> Sabio
+        <input type="checkbox" name="pregunta3.3" class="checkboxes" value="Si"> Sabio
         <br>
-        <input type="checkbox" name="pregunta3.4" value="Si"> Carismático
+        <input type="checkbox" name="pregunta3.4" class="checkboxes" value="Si"> Carismático
         <br>
-        <input type="checkbox" name="pregunta3.5" value="Si"> Resistente
+        <input type="checkbox" name="pregunta3.5" class="checkboxes" value="Si"> Resistente
         <br>
-        <input type="checkbox" name="pregunta3.6" value="Si"> Místico
+        <input type="checkbox" name="pregunta3.6" class="checkboxes" value="Si"> Místico
         <br>
-        <input type="checkbox" name="pregunta3.7" value="Si"> Alegre
+        <input type="checkbox" name="pregunta3.7" class="checkboxes" value="Si"> Alegre
 
 
         <!-- Pregunta 4: Select -->
@@ -152,15 +152,15 @@
         <?php
             echo "<p>¿Qué elementos resuenan más contigo en el día a día, ".$_SESSION["nombrePersonaje"]."?</p>"
         ?>
-        <input type="checkbox" name="pregunta8.1" value="Si"> El ardor y la pasión del fuego
+        <input type="checkbox" name="pregunta8.1" class="checkboxes2" value="Si"> El ardor y la pasión del fuego
         <br>
-        <input type="checkbox" name="pregunta8.2" value="Si"> La solidez y seguridad de la tierra
+        <input type="checkbox" name="pregunta8.2" class="checkboxes2" value="Si"> La solidez y seguridad de la tierra
         <br>
-        <input type="checkbox" name="pregunta8.3" value="Si"> La libertad y la amplitud del cielo
+        <input type="checkbox" name="pregunta8.3" class="checkboxes2" value="Si"> La libertad y la amplitud del cielo
         <br>
-        <input type="checkbox" name="pregunta8.4" value="Si"> La calma y la profundidad del agua
+        <input type="checkbox" name="pregunta8.4" class="checkboxes2" value="Si"> La calma y la profundidad del agua
         <br>
-        <input type="checkbox" name="pregunta8.5" value="Si"> Una energía mística que parece envolverlo todo
+        <input type="checkbox" name="pregunta8.5" class="checkboxes2" value="Si"> Una energía mística que parece envolverlo todo
 
         <!-- Pregunta 9: Select -->
         <?php
@@ -231,6 +231,26 @@
             }
         
         ?>
+        <script>
+            function verificaCheckboxes(evento){
+                const inputs = document.querySelectorAll(".checkboxes:checked");
+
+                if(inputs.length == 0){
+                    alert("Por favor seleccione al menos una opción en los checkboxes de la pregunta 3");
+                    evento.preventDefault();
+                }
+            }
+
+            function verificaCheckboxes2(evento){
+                const inputs = document.querySelectorAll(".checkboxes2:checked");
+
+                if(inputs.length == 0){
+                    alert("Por favor seleccione al menos una opción en los checkboxes de la pregunta 8");
+                    evento.preventDefault();
+                }
+            }
+
+        </script>
 
 
     </form>
