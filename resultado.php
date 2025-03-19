@@ -6,6 +6,8 @@
     <title>Resultado</title>
 </head>
 <?php
+    session_start();
+
     if(isset($_REQUEST["pregunta1.1H"])){
         $_SESSION["respuesta1Habilidad"] = $_REQUEST["pregunta1.1H"];
     }else{
@@ -97,6 +99,13 @@
         $_SESSION["respuesta18Habilidad"] = "No";
     }
 
+    echo "<p>Nacido en tierras marcadas por antiguas leyendas, "."<strong>".$_SESSION["nombrePersonaje"]."</strong>"." creció inmerso en las tradiciones y secretos de su pueblo "."<strong>".$_SESSION["razaPersonaje"]."</strong>".". Desde muy joven, aprendió el valor de la sabiduría y el coraje, impulsándole a forjar su propio camino. Con un espíritu indomable se adentró en el mundo, decidido a descubrir y dominar los misterios que el destino le tenía reservados.
+
+    Durante su adolescencia, "."<strong>".$_SESSION["nombrePersonaje"]."</strong>"." el "."<strong>".$_SESSION["razaPersonaje"]."</strong>"." encontró en la disciplina y el aprendizaje la llave para desentrañar las habilidades únicas de su linaje. Con gran pasión, eligió el sendero del "."<strong>".$_SESSION["clasePersonaje"]."</strong>".", esta decisión no fue casualidad, ya que el destino parecía haberle señalado hacia una misión mayor: proteger a los suyos y mantener vivas las leyendas que contaban las antiguas generaciones.
+
+    Armado con su confiable "."<strong>".$_SESSION["armaPersonaje"]."</strong>".", "."<strong>".$_SESSION["nombrePersonaje"]."</strong>"." emprendió una serie de aventuras que le llevaron por reinos olvidados, bosques encantados y ciudades en ruinas. Cada batalla y cada encuentro le permitieron perfeccionar sus habilidades, mientras forjaba alianzas y enfrentaba enemigos tan temibles como los mitos que alguna vez escuchó de niño. La "."<strong>".$_SESSION["armaPersonaje"]."</strong>"." no solo es un instrumento de combate, sino el símbolo tangible de su compromiso con el honor y la justicia, reflejando la dualidad de su ser: fuerza y sabiduría, tradición e innovación.
+
+    Hoy, este "."<strong>".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"]."</strong>"." continúa su viaje, guiado por un firme código moral heredado de sus ancestros y por la convicción de que cada acción, cada decisión, moldea el futuro de su raza y del mundo que lo rodea.</p>"
     ?>
 <body>
     
