@@ -7,13 +7,6 @@
     <title>Página 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        #titulo{
-            height: 150px;
-            border: 2px solid black;
-            border-radius: 15px;
-            text-align: center;
-            align-content: center;
-        }
         #formulario{
             padding: 2%;
             border: 2px solid black;
@@ -22,6 +15,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: lightgreen;
+        }
+        #titulo{
+            height: 150px;
+            border: 2px solid black;
+            border-radius: 15px;
+            text-align: center;
+            align-content: center;
+            background-color: slateblue;
         }
     </style>
 </head>
@@ -310,9 +312,8 @@
     <script>
         function verificaCheckboxes(evento){
             const inputs = document.querySelectorAll("#checkboxes .form-check-input:checked");
-            /*
-                document.querySelectorAll("#checkboxes .form-check-input:checked") --> agrupa todos los elementos que tengan la clase "form-check-input" que hayan sido seleccionados (":checked") DENTRO del elemento con el id "checkboxes"
-            */
+
+                //document.querySelectorAll("#checkboxes .form-check-input:checked") --> agrupa todos los elementos que tengan la clase "form-check-input" que hayan sido seleccionados (":checked") DENTRO del elemento con el id "checkboxes"
 
             if(inputs.length == 0){ //Si no ha seleccionado ninguna opción
                 alert("Por favor seleccione al menos una opción en los checkboxes de la pregunta 3");
@@ -322,9 +323,8 @@
 
         function verificaCheckboxes2(evento){
             const inputs = document.querySelectorAll("#checkboxes2 .form-check-input:checked");
-            /*
-                document.querySelectorAll("#checkboxes2 .form-check-input:checked") --> agrupa todos los elementos que tengan la clase "form-check-input" que hayan sido seleccionados (":checked") DENTRO del elemento con el id "checkboxes2"
-            */
+
+                //document.querySelectorAll("#checkboxes2 .form-check-input:checked") --> agrupa todos los elementos que tengan la clase "form-check-input" que hayan sido seleccionados (":checked") DENTRO del elemento con el id "checkboxes2"
 
             if(inputs.length == 0){ //Si no ha seleccionado ninguna opción
                 alert("Por favor seleccione al menos una opción en los checkboxes de la pregunta 8");

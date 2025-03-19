@@ -12,6 +12,7 @@
             border-radius: 15px;
             text-align: center;
             align-content: center;
+            background-color: slateblue;
         }
         #formulario{
             padding: 2%;
@@ -21,6 +22,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: lightgreen;
         }
     </style>
 </head>

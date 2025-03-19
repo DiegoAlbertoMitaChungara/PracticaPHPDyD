@@ -7,7 +7,7 @@
     <title>Insertar Nombre</title>
     <style>
         body{
-            background-image: url("https://forgottenrealms.fandom.com/wiki/File:Neverwinter-_Dragonslayer.jpg");
+            background-image: url("https://https://www.boardgamequest.com/wp-content/uploads/2015/01/Hydra.jpg.fandom.com/wiki/File:Neverwinter-_Dragonslayer.jpg");
         }
         #formulario{
             height: 400px;
@@ -17,7 +17,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: gray;
+            background-color: lightgreen;
         }
         #titulo{
             height: 150px;
@@ -25,7 +25,7 @@
             border-radius: 15px;
             text-align: center;
             align-content: center;
-            background-color: midnightblue;
+            background-color: slateblue;
         }
 
     </style>
