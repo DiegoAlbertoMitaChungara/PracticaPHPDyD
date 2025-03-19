@@ -93,239 +93,226 @@
     
     //Cambiar lo que es pregunta por respuesta(recordar si más adelante añadimos algún otro easter egg o algo, después del $_SESSION va dentro [respuesta])
 
-    //Verifica antes si todas las respuestas son la primera
-    if($_SESSION["respuesta1"] == "Si" && $_SESSION["respuesta2"] == "2.1" && $_SESSION["respuesta3.1"] == "Si" && $_SESSION["respuesta4"] == "Si" 
-        && $_SESSION["respuesta5"] == "5.1" && $_SESSION["respuesta6"] == "6.1" && $_SESSION["respuesta7"] == "Si" && $_SESSION["respuesta8.1"] == "Si" && $_SESSION["pregunta9"] == "Si"){
-        
-        
+    $raza[0] = 0;//Draconido
+    $raza[1] = 0;//Elfo
+    $raza[2] = 0;//Enano
+    $raza[3] = 0;//Gnomo
+    $raza[4] = 0;//Humano
+    $raza[5] = 0;//Mediano
+    $raza[6] = 0;//Semielfo
+    $raza[7] = 0;//Semiorco
+    $raza[8] = 0;//Tiflin
 
+    //Cambiar lo que es pregunta por respuesta
 
-    }else{
-        $raza[0] = 0;//Draconido
-        $raza[1] = 0;//Elfo
-        $raza[2] = 0;//Enano
-        $raza[3] = 0;//Gnomo
-        $raza[4] = 0;//Humano
-        $raza[5] = 0;//Mediano
-        $raza[6] = 0;//Semielfo
-        $raza[7] = 0;//Semiorco
-        $raza[8] = 0;//Tiflin
-
-        //Cambiar lo que es pregunta por respuesta
-
-        if($_SESSION["respuesta1"]=="Si"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta1"]=="No"){
-            $raza[2]++;
-            $raza[3]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-            $raza[7]++;
-        }
-        if($_SESSION["respuesta2"]=="2.1"){
-            $raza[2]++;
-            $raza[3]++;
-        }
-        if($_SESSION["respuesta2"]=="2.2"){
-            $raza[1]++;
-            $raza[3]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta2"]=="2.3"){
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta2"]=="2.4"){
-            $raza[2]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta2"]=="2.5"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[3]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta3.1"]=="Si"){
-            $raza[0]++;
-            $raza[2]++;
-            $raza[4]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta3.2"]=="Si"){
-            $raza[2]++;
-            $raza[3]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta3.3"]=="Si"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[2]++;
-            $raza[4]++;
-        }
-        if($_SESSION["respuesta3.4"]=="Si"){
-            $raza[0]++;
-            $raza[3]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta3.5"]=="Si"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[2]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta3.6"]=="Si"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[3]++;
-            $raza[6]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta3.7"]=="Si"){
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta4"]=="Si"){
-            $raza[0]++;
-            $raza[3]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta4"]=="No"){
-            $raza[1]++;
-            $raza[2]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta5"]=="5.1"){
-            $raza[0]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta5"]=="5.2"){
-            $raza[4]++;
-            $raza[5]++;
-        }
-        if($_SESSION["respuesta5"]=="5.3"){
-            $raza[1]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta5"]=="5.4"){
-            $raza[2]++;
-            $raza[3]++;
-        }
-        if($_SESSION["respuesta5"]=="5.5"){
-            $raza[4]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta6"]=="6.1"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[2]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta6"]=="6.2"){
-            $raza[3]++;
-            $raza[4]++;
-            $raza[5]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta7"]=="Si"){
-            $raza[0]++;
-            $raza[1]++;
-            $raza[3]++;
-            $raza[6]++;
-            $raza[7]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta7"]=="No"){
-            $raza[2]++;
-            $raza[4]++;
-            $raza[5]++;
-        }
-        if($_SESSION["respuesta8.1"]=="Si"){
-            $raza[0]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta8.2"]=="Si"){
-            $raza[2]++;
-            $raza[7]++;
-        }
-        if($_SESSION["respuesta8.3"]=="Si"){
-            $raza[0]++;
-            $raza[4]++;
-            $raza[5]++;
-        }
-        if($_SESSION["respuesta8.4"]=="Si"){
-            $raza[1]++;
-            $raza[6]++;
-        }
-        if($_SESSION["respuesta8.5"]=="Si"){
-            $raza[1]++;
-            $raza[3]++;
-            $raza[6]++;
-            $raza[8]++;
-        }
-        if($_SESSION["respuesta9"]=="Si"){
-            $raza[0]++;
-            $raza[4]++;
-            $raza[6]++;
-            $raza[7]++;
-        }
-        if($_SESSION["respuesta9"]=="No"){
-            $raza[1]++;
-            $raza[2]++;
-            $raza[3]++;
-            $raza[5]++;
-            $raza[8]++;
-        }
-
-        //Elección de raza ganadora
-
-        include "funciones.php";
-
-        $razaGanadora = indiceElementoMayor($raza);
-
-        if($razaGanadora == 0){
-            $_SESSION["razaPersonaje"] = "dracónido";
-        }else if($razaGanadora == 1){
-            $_SESSION["razaPersonaje"] = "elfo";
-        }else if($razaGanadora == 2){
-            $_SESSION["razaPersonaje"] = "eneno";
-        }else if($razaGanadora == 3){
-            $_SESSION["razaPersonaje"] = "gnomo";
-        }else if($razaGanadora == 4){
-            $_SESSION["razaPersonaje"] = "humano";
-        }else if($razaGanadora == 5){
-            $_SESSION["razaPersonaje"] = "mediano";
-        }else if($razaGanadora == 6){
-            $_SESSION["razaPersonaje"] = "semielfo";
-        }else if($razaGanadora == 7){
-            $_SESSION["razaPersonaje"] = "semiorco";
-        }else{
-            $_SESSION["razaPersonaje"] = "tiflin";
-        }
-            
-
+    if($_SESSION["respuesta1"]=="Si"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta1"]=="No"){
+        $raza[2]++;
+        $raza[3]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+        $raza[7]++;
+    }
+    if($_SESSION["respuesta2"]=="2.1"){
+        $raza[2]++;
+        $raza[3]++;
+    }
+    if($_SESSION["respuesta2"]=="2.2"){
+        $raza[1]++;
+        $raza[3]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta2"]=="2.3"){
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta2"]=="2.4"){
+        $raza[2]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta2"]=="2.5"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[3]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta3.1"]=="Si"){
+        $raza[0]++;
+        $raza[2]++;
+        $raza[4]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta3.2"]=="Si"){
+        $raza[2]++;
+        $raza[3]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta3.3"]=="Si"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[2]++;
+        $raza[4]++;
+    }
+    if($_SESSION["respuesta3.4"]=="Si"){
+        $raza[0]++;
+        $raza[3]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta3.5"]=="Si"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[2]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta3.6"]=="Si"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[3]++;
+        $raza[6]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta3.7"]=="Si"){
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta4"]=="Si"){
+        $raza[0]++;
+        $raza[3]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta4"]=="No"){
+        $raza[1]++;
+        $raza[2]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta5"]=="5.1"){
+        $raza[0]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta5"]=="5.2"){
+        $raza[4]++;
+        $raza[5]++;
+    }
+    if($_SESSION["respuesta5"]=="5.3"){
+        $raza[1]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta5"]=="5.4"){
+        $raza[2]++;
+        $raza[3]++;
+    }
+    if($_SESSION["respuesta5"]=="5.5"){
+        $raza[4]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta6"]=="6.1"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[2]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta6"]=="6.2"){
+        $raza[3]++;
+        $raza[4]++;
+        $raza[5]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta7"]=="Si"){
+        $raza[0]++;
+        $raza[1]++;
+        $raza[3]++;
+        $raza[6]++;
+        $raza[7]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta7"]=="No"){
+        $raza[2]++;
+        $raza[4]++;
+        $raza[5]++;
+    }
+    if($_SESSION["respuesta8.1"]=="Si"){
+        $raza[0]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta8.2"]=="Si"){
+        $raza[2]++;
+        $raza[7]++;
+    }
+    if($_SESSION["respuesta8.3"]=="Si"){
+        $raza[0]++;
+        $raza[4]++;
+        $raza[5]++;
+    }
+    if($_SESSION["respuesta8.4"]=="Si"){
+        $raza[1]++;
+        $raza[6]++;
+    }
+    if($_SESSION["respuesta8.5"]=="Si"){
+        $raza[1]++;
+        $raza[3]++;
+        $raza[6]++;
+        $raza[8]++;
+    }
+    if($_SESSION["respuesta9"]=="Si"){
+        $raza[0]++;
+        $raza[4]++;
+        $raza[6]++;
+        $raza[7]++;
+    }
+    if($_SESSION["respuesta9"]=="No"){
+        $raza[1]++;
+        $raza[2]++;
+        $raza[3]++;
+        $raza[5]++;
+        $raza[8]++;
     }
 
+    //Elección de raza ganadora
 
+    include "funciones.php";
+
+    $razaGanadora = indiceElementoMayor($raza);
+
+    if($razaGanadora == 0){
+        $_SESSION["razaPersonaje"] = "dracónido";
+    }else if($razaGanadora == 1){
+        $_SESSION["razaPersonaje"] = "elfo";
+    }else if($razaGanadora == 2){
+        $_SESSION["razaPersonaje"] = "eneno";
+    }else if($razaGanadora == 3){
+        $_SESSION["razaPersonaje"] = "gnomo";
+    }else if($razaGanadora == 4){
+        $_SESSION["razaPersonaje"] = "humano";
+    }else if($razaGanadora == 5){
+        $_SESSION["razaPersonaje"] = "mediano";
+    }else if($razaGanadora == 6){
+        $_SESSION["razaPersonaje"] = "semielfo";
+    }else if($razaGanadora == 7){
+        $_SESSION["razaPersonaje"] = "semiorco";
+    }else{
+        $_SESSION["razaPersonaje"] = "tiflin";
+    }
 
 ?>
 <body>
