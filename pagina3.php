@@ -318,6 +318,7 @@
             </div>
         <div class="col-3"></div>
     </div>
+
     <div class="row">
         <div class="col-3">
 
@@ -338,6 +339,7 @@
                 <strong>Carisma:</strong> El Carisma mide la fuerza de la personalidad, la capacidad de persuasión y el magnetismo personal. Un alto Carisma permite a los personajes liderar, inspirar y negociar de manera efectiva. Es vital para aquellas clases que se centran en la interacción social y en la magia basada en la fuerza de voluntad, como los bardos, hechiceros y paladines. Un personaje carismático puede influir en amigos y enemigos, moldeando situaciones a su favor mediante la diplomacia o la intimidación.
             </p>
 
+            <!--Pregunta 1: Inputs solo lectura-->
             <form action="pagina4.php" method="POST">
                 <label>Inteligencia: </label>
                 <input type="text" name="carInteligencia" id="numInteligencia" class="estadisticas" size="1" value="0" readonly><br>
@@ -358,7 +360,7 @@
                 <input type="text" name="carCarisma" id="numCarisma" class="estadisticas" size="1" value="0" readonly><br>
 
                 <button type="button" class="btn btn-primary" onclick="generaEstadisticasAleatorias()">Generar Estadisticas</button>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Establecer Estadísticas</button>
             </form>
 
 

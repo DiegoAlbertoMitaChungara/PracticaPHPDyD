@@ -26,11 +26,13 @@
     }else{
         $_SESSION["respuesta1Habilidad"] = "No";
     }
+
     if(isset($_REQUEST["pregunta1.2H"])){
         $_SESSION["respuesta2Habilidad"] = $_REQUEST["pregunta1.2H"];
     }else{
         $_SESSION["respuesta2Habilidad"] = "No";
     }
+    
     if(isset($_REQUEST["pregunta1.3H"])){
         $_SESSION["respuesta3Habilidad"] = $_REQUEST["pregunta1.3H"];
     }else{

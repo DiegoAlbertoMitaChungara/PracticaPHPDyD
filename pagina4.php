@@ -202,7 +202,7 @@
 
             <form action="resultado.php" method="POST" onsubmit="verificaCheckboxes(event)">
                 <div class="mb-3" id="checkboxes">
-                    <label>Selecciona las habilidades que mejor describen tu personalidad, <?php echo $_SESSION["nombrePersonaje"]?></label>
+                <label>Selecciona las habilidades que mejor describen tu personalidad, <?php echo $_SESSION["nombrePersonaje"]?></label>
 
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="pregunta1.1H" value="Si">
@@ -330,9 +330,9 @@
         function verificaCheckboxes(evento){
             const inputs = document.querySelectorAll("#checkboxes .form-check-input:checked");
 
-            if(inputs.length < 4 || inputs.length > 8){
+            if(inputs.length < 4 || inputs.length > 8){ 
                 alert("Por favor seleccione entre 4 y 8 opciones");
-                evento.preventDefault();
+                evento.preventDefault(); 
             }
         }
 

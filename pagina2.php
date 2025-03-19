@@ -464,7 +464,7 @@
                     <input type="date" name="pregunta4C" min="2025-01-01" max="2025-12-31" value="2025-01-01">
                     <div class="form-text">Solo fechas de 2025</div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Conocer Clase</button>
             </form>
 
 
