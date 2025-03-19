@@ -5,111 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        table {
+                text-align: center;
+                font-family: Arial, sans-serif;
+        }
+        th {
+            background-color: slateblue !important;
+        }
+        td {
+            background-color: lightgreen !important;
+        }
+    </style>
 </head>
-<style>
-    table {
-            text-align: center;
-            font-family: Arial, sans-serif;
-    }
-    th {
-        background-color: slateblue !important;
-    }
-    td {
-        background-color: lightgreen !important;
-    }
-</style>
+
 <?php
     session_start();
 
-    if(isset($_REQUEST["pregunta1.1H"])){
+    if(isset($_REQUEST["pregunta1_1"])){
         $_SESSION["respuesta1Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta1Habilidad"] = "No";
     }
 
-    if(isset($_REQUEST["pregunta1.2H"])){
-        $_SESSION["respuesta2Habilidad"] = $_REQUEST["pregunta1.2H"];
+    if(isset($_REQUEST["pregunta1_2"])){
+        $_SESSION["respuesta2Habilidad"] = $_REQUEST["pregunta1_2"];
     }else{
         $_SESSION["respuesta2Habilidad"] = "No";
     }
-    
-    if(isset($_REQUEST["pregunta1.3H"])){
-        $_SESSION["respuesta3Habilidad"] = $_REQUEST["pregunta1.3H"];
+
+    if(isset($_REQUEST["pregunta1_3"])){
+        $_SESSION["respuesta3Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta3Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.4H"])){
-        $_SESSION["respuesta4Habilidad"] = $_REQUEST["pregunta1.4H"];
+    if(isset($_REQUEST["pregunta1_4"])){
+        $_SESSION["respuesta4Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta4Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.5H"])){
-        $_SESSION["respuesta5Habilidad"] = $_REQUEST["pregunta1.5H"];
+    if(isset($_REQUEST["pregunta1_5"])){
+        $_SESSION["respuesta5Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta5Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.6H"])){
-        $_SESSION["respuesta6Habilidad"] = $_REQUEST["pregunta1.6H"];
+    if(isset($_REQUEST["pregunta1_6"])){
+        $_SESSION["respuesta6Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta6Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.7H"])){
-        $_SESSION["respuesta7Habilidad"] = $_REQUEST["pregunta1.7H"];
+    if(isset($_REQUEST["pregunta1_7"])){
+        $_SESSION["respuesta7Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta7Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.8H"])){
-        $_SESSION["respuesta8Habilidad"] = $_REQUEST["pregunta1.8H"];
+    if(isset($_REQUEST["pregunta1_8"])){
+        $_SESSION["respuesta8Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta8Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.9H"])){
-        $_SESSION["respuesta9Habilidad"] = $_REQUEST["pregunta1.9H"];
+    if(isset($_REQUEST["pregunta1_9"])){
+        $_SESSION["respuesta9Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta9Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.10H"])){
-        $_SESSION["respuesta10Habilidad"] = $_REQUEST["pregunta1.10H"];
+    if(isset($_REQUEST["pregunta1_10"])){
+        $_SESSION["respuesta10Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta10Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.11H"])){
-        $_SESSION["respuesta11Habilidad"] = $_REQUEST["pregunta1.11H"];
+    if(isset($_REQUEST["pregunta1_11"])){
+        $_SESSION["respuesta11Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta11Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.12H"])){
-        $_SESSION["respuesta12Habilidad"] = $_REQUEST["pregunta1.12H"];
+    if(isset($_REQUEST["pregunta1_12"])){
+        $_SESSION["respuesta12Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta12Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.13H"])){
-        $_SESSION["respuesta13Habilidad"] = $_REQUEST["pregunta1.13H"];
+    if(isset($_REQUEST["pregunta1_13"])){
+        $_SESSION["respuesta13Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta13Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.14H"])){
-        $_SESSION["respuesta14Habilidad"] = $_REQUEST["pregunta1.14H"];
+    if(isset($_REQUEST["pregunta1_14"])){
+        $_SESSION["respuesta14Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta14Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.15H"])){
-        $_SESSION["respuesta15Habilidad"] = $_REQUEST["pregunta1.15H"];
+    if(isset($_REQUEST["pregunta1_15"])){
+        $_SESSION["respuesta15Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta15Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.16H"])){
-        $_SESSION["respuesta16Habilidad"] = $_REQUEST["pregunta1.16H"];
+    if(isset($_REQUEST["pregunta1_16"])){
+        $_SESSION["respuesta16Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta16Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.17H"])){
-        $_SESSION["respuesta17Habilidad"] = $_REQUEST["pregunta1.17H"];
+    if(isset($_REQUEST["pregunta1_17"])){
+        $_SESSION["respuesta17Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta17Habilidad"] = "No";
     }
-    if(isset($_REQUEST["pregunta1.18H"])){
-        $_SESSION["respuesta18Habilidad"] = $_REQUEST["pregunta1.18H"];
+    if(isset($_REQUEST["pregunta1_18"])){
+        $_SESSION["respuesta18Habilidad"] = rand(2,5);
     }else{
         $_SESSION["respuesta18Habilidad"] = "No";
     }
@@ -121,7 +122,7 @@
     Armado con su confiable "."<strong>".$_SESSION["armaPersonaje"]."</strong>".", "."<strong>".$_SESSION["nombrePersonaje"]."</strong>"." emprendió una serie de aventuras que le llevaron por reinos olvidados, bosques encantados y ciudades en ruinas. Cada batalla y cada encuentro le permitieron perfeccionar sus habilidades, mientras forjaba alianzas y enfrentaba enemigos tan temibles como los mitos que alguna vez escuchó de niño. La "."<strong>".$_SESSION["armaPersonaje"]."</strong>"." no solo es un instrumento de combate, sino el símbolo tangible de su compromiso con el honor y la justicia, reflejando la dualidad de su ser: fuerza y sabiduría, tradición e innovación.
 
     Hoy, este "."<strong>".$_SESSION["razaPersonaje"]." ".$_SESSION["clasePersonaje"]."</strong>"." continúa su viaje, guiado por un firme código moral heredado de sus ancestros y por la convicción de que cada acción, cada decisión, moldea el futuro de su raza y del mundo que lo rodea.</p>"
-    ?>
+?>
 <body>
     <div class="container">
         <div class="row">

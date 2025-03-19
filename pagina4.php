@@ -205,109 +205,109 @@
                 <label>Selecciona las habilidades que mejor describen tu personalidad, <?php echo $_SESSION["nombrePersonaje"]?></label>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.1H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_1" value="Si">
                         <label class="form-check-label">
                             Acrobacias
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.2H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_2" value="Si">
                         <label class="form-check-label">
                             Trato con animales
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.3H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_3" value="Si">
                         <label class="form-check-label">
                             Arcano
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.4H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_4" value="Si">
                         <label class="form-check-label">
                             Atletismo
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.5H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_5" value="Si">
                         <label class="form-check-label">
                             Engaño
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.6H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_6" value="Si">
                         <label class="form-check-label">
                             Historia
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.7H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_7" value="Si">
                         <label class="form-check-label">
                             Perspicacia
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.8H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_8" value="Si">
                         <label class="form-check-label">
                             Intimidación
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.9H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_9" value="Si">
                         <label class="form-check-label">
                             Investigación
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.10H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_10" value="Si">
                         <label class="form-check-label">
                             Medicina
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.11H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_11" value="Si">
                         <label class="form-check-label">
                             Naturaleza
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.12H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_12" value="Si">
                         <label class="form-check-label">
                             Percepción
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.13H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_13" value="Si">
                         <label class="form-check-label">
                             Interpretación
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.14H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_14" value="Si">
                         <label class="form-check-label">
                             Persuasión
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.15H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_15" value="Si">
                         <label class="form-check-label">
                             Religión
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.16H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_16" value="Si">
                         <label class="form-check-label">
                             Truco Rumano
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.17H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_17" value="Si">
                         <label class="form-check-label">
                             Sigilo
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="pregunta1.18H" value="Si">
+                        <input class="form-check-input" type="checkbox" name="pregunta1_18" value="Si">
                         <label class="form-check-label">
                             Supervivencia
                         </label>
