@@ -317,6 +317,9 @@
 ?>
 <body>
     <h1>Clases de Dungeons & Dragons</h1>
+    <?php
+        echo "Ahora que conocemos tu origen ".$_SESSION["razaPersonaje"].", ".$_SESSION["nombrePersonaje"].", es hora de averiguar qué clase es la idónea para una futura leyenda como tú.";
+    ?>
     <p>
         En Dungeons & Dragons existen diversas clases únicas. Algunas de las principales son:<br><br>
         <strong>Bárbaro:</strong> Guerrero feroz que canaliza su furia y fuerza bruta en el combate, destacando en la agresividad y el poder físico.
@@ -347,20 +350,20 @@
     <form action="pagina3.php" method="POST">
 
         <!-- Pregunta 1 -->
-        <p>¿A cuántos enemigos preferirías enfrentar en combate, <?php $_SESSION["nombrePersonaje"] ?>?</p>
+        <p>¿A cuántos enemigos preferirías enfrentar en combate, <?php echo $_SESSION["nombrePersonaje"]." el ".$_SESSION["razaPersonaje"] ?>?</p>
         <input type="number" name="pregunta1C" min="1" max="30" value="1">
 
         <!-- Pregunta 2 -->
-        <p>Elige el color con el que te sientas más identificado, <?php $_SESSION["nombrePersonaje"] ?>?</p>
+        <p>Elige el color con el que te sientas más identificado, <?php echo $_SESSION["nombrePersonaje"]." el ".$_SESSION["razaPersonaje"] ?>?</p>
         <input type="color" name="pregunta2C">
         
         <!-- Pregunta 3 -->
-        <p>¿Cuántas aliados prefieres tener a tu lado en una batalla decisiva, <?php $_SESSION["nombrePersonaje"] ?>? (0-25)</p>
+        <p>¿Cuántas aliados prefieres tener a tu lado en una batalla decisiva, <?php echo $_SESSION["nombrePersonaje"]." el ".$_SESSION["razaPersonaje"] ?>? (0-25)</p>
         <input type="range" name="pregunta3C" min="0" max="25" style="width: 500px;">
 
         <!-- Pregunta 4 -->
-        <p>¿En qué fecha iniciarías tu aventura épica, <?php $_SESSION["nombrePersonaje"] ?>? (solo se evalúa el mes y el día)</p>
-        <input type="date" name="pregunta4C" min="2025-01-01" max="2025-12-31">
+        <p>¿En qué fecha iniciarías tu aventura épica, <?php echo $_SESSION["nombrePersonaje"]." el ".$_SESSION["razaPersonaje"] ?>? (solo se evalúa el mes y el día)</p>
+        <input type="date" name="pregunta4C" min="2025-01-01" max="2025-12-31" value="2025-01-01">
 
         <br><br>
         <input type="submit" value="Conocer Clase">
