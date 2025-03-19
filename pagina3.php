@@ -255,30 +255,40 @@
 
     if($claseGanadora == 0){
         $_SESSION["clasePersonaje"] = "barbaro";
+        $_SESSION["armaPersonaje"] = "Hacha de batalla";
     }else if($claseGanadora == 1){
         $_SESSION["clasePersonaje"] = "bardo";
+        $_SESSION["armaPersonaje"] = "Estoque y laúd";
     }else if($claseGanadora == 2){
         $_SESSION["clasePersonaje"] = "brujo";
+        $_SESSION["armaPersonaje"] = "Báculo arcano";
     }else if($claseGanadora == 3){
         $_SESSION["clasePersonaje"] = "clérigo";
+        $_SESSION["armaPersonaje"] = "Maza";
     }else if($claseGanadora == 4){
         $_SESSION["clasePersonaje"] = "druida";
+        $_SESSION["armaPersonaje"] = "Bastón de madera";
     }else if($claseGanadora == 5){
         $_SESSION["clasePersonaje"] = "explorador";
+        $_SESSION["armaPersonaje"] = "Arco largo";
     }else if($claseGanadora == 6){
         $_SESSION["clasePersonaje"] = "guerrero";
+        $_SESSION["armaPersonaje"] = "Espada bastarda";
     }else if($claseGanadora == 7){
         $_SESSION["clasePersonaje"] = "hechicero";
+        $_SESSION["armaPersonaje"] = "Varita mágica";
     }else if($claseGanadora == 8){
         $_SESSION["clasePersonaje"] = "mago";
+        $_SESSION["armaPersonaje"] = "Libro de hechizos y daga";
     }else if($claseGanadora == 9){
         $_SESSION["clasePersonaje"] = "monje";
+        $_SESSION["armaPersonaje"] = "Puños";
     }else if($claseGanadora == 10){
         $_SESSION["clasePersonaje"] = "paladín";
-    }else if($claseGanadora == 11){
-        $_SESSION["clasePersonaje"] = "druida";
+        $_SESSION["armaPersonaje"] = "Espada larga";
     }else{
         $_SESSION["clasePersonaje"] = "pícaro";
+        $_SESSION["armaPersonaje"] = "Daga";
     }
 ?>
 <body>
